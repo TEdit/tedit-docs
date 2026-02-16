@@ -12,8 +12,6 @@ Get TEdit at [https://github.com/TEdit/Terraria-Map-Editor/releases/latest](http
 
 TEdit 5 is a complete redesign of the Terraria Map Editor. Edit worlds like paint — place tiles, walls, liquids, and wire with brushes and fills. Edit chests, signs, and NPCs. Build epic dungeons, castles, cities, and adventure maps.
 
-![TEdit 5](/img/te5-logo-hero.png)
-
 ![TEdit 5 Editor](/img/v5/interface/TEdit_sNWvexY0S7.png)
 
 ## What's New in TEdit 5
