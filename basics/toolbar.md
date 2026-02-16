@@ -57,7 +57,7 @@ While there is a selection rectangle present painting can only be done inside th
 
 This tool is also used to copy part of the map. To do this select what you want to copy, then use the copy button on the toolbar, the copy function in the `menubar`, or press `ctrl+c`.
 
-## Picker Tool
+## Picker Tool \[R]
 
 {% hint style="warning" %}
 Picking furniture and sprites may lead to bugs.
@@ -73,6 +73,10 @@ Picking furniture and sprites may lead to bugs.
 Also known as eye dropper, this tool "picks" things you click on. Things include tiles, walls, and liquids.&#x20;
 
 If you right-click on things it will pick them for the mask.
+
+#### Hold-to-Pick
+
+You can **hold** `R` to temporarily switch to the Picker tool. While holding the key, pick a tile, then release `R` to return to your previous tool. A quick **tap** of `R` permanently switches to the Picker as usual.
 
 The picker tool uses the [Paint Mode](active-tray.md#tile-and-wall-options) to show what you have picked.
 

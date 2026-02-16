@@ -18,6 +18,7 @@ TEdit 5 supports customizable keyboard shortcuts for most actions.
 | `E` | Pencil |
 | `B` | Brush |
 | `F` | Fill |
+| `R` | Picker (hold to temporarily pick, tap to switch) |
 | `P` | Point |
 | `T` | Sprite |
 

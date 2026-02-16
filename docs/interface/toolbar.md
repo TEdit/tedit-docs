@@ -32,7 +32,7 @@ Draw a rectangle selection on the map.
 
 While a selection is active, painting is restricted to inside the selection.
 
-## Picker Tool
+## Picker Tool `[R]`
 
 Also known as the eyedropper. Picks tile/wall/liquid properties from the map.
 
@@ -40,6 +40,8 @@ Also known as the eyedropper. Picks tile/wall/liquid properties from the map.
 |--------|--------|
 | Left-click | Pick tile, wall, and liquid |
 | Right-click | Pick as mask |
+
+**Hold-to-pick:** Hold `R` to temporarily switch to the Picker, pick a tile, then release `R` to return to your previous tool. A quick tap of `R` switches to Picker permanently.
 
 ## Pencil Tool `[E]`
 

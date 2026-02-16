@@ -31,7 +31,7 @@
 * B - Brush (Painting tiles, walls, wires and liquid) &#x20;
 * F - Fill (Bucket fill tiles and/or walls) &#x20;
 * E - Pencil (Painting tiles, walls, wires and liquid) &#x20;
-* R - Picker (Left click picks tile/wall, right click picks tile mask/wall mask) &#x20;
+* R - Picker (Left click picks tile/wall, right click picks tile mask/wall mask; hold R to temporarily pick, release to return to previous tool) &#x20;
 * P - Point (Places spawn, dungeon and npc homes) &#x20;
 * S - Selection (Select and area for editing or copying) &#x20;
 * T - Sprite (Place a sprite from the sprite list) &#x20;
