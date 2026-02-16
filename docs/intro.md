@@ -36,4 +36,12 @@ TEdit 5 is a complete redesign of the Terraria Map Editor. Edit worlds like pain
 | **[Keybindings](configuration/keybindings.md)** | Keyboard shortcuts reference |
 | **[Upgrading from TEdit 4](migration/upgrading-from-tedit4.md)** | What changed and how to migrate |
 
+## Support TEdit
+
+Enjoy TEdit? Help keep development going and servers online — every bit helps!
+
+**[Become a Patron on Patreon](https://www.patreon.com/join/BinaryConstruct)**
+
+---
+
 Looking for TEdit 4 docs? Use the version dropdown in the navbar.

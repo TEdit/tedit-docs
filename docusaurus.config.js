@@ -96,6 +96,11 @@ const config = {
             position: 'right',
           },
           {
+            href: 'https://www.patreon.com/join/BinaryConstruct',
+            label: '❤ Sponsor',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/TEdit/Terraria-Map-Editor',
             label: 'GitHub',
             position: 'right',
