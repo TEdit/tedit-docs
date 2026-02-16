@@ -1,22 +1,39 @@
----
-description: TEdit - Terraria Map Editor
----
-
 # TEdit Documentation
 
-{% hint style="success" %}
-To download TEdit visit [https://github.com/TEdit/Terraria-Map-Editor/releases/latest](https://github.com/TEdit/Terraria-Map-Editor/releases/latest).
-{% endhint %}
+Official documentation for [TEdit](https://github.com/TEdit/Terraria-Map-Editor) — the Terraria Map Editor.
 
-TEdit - Terraria Map Editor is a stand alone, open source map editor for Terraria. It lets you edit maps just like paint! It also lets you change world settings, time, bosses downed, edit chests, sign, make epic dungeons, castles, cities, and add rewards for your adventurers!
+**Live site:** [https://docs.tedit.dev](https://docs.tedit.dev)
 
-![TEdit Screenshot](.gitbook/assets/tedit_screenshot.png)
+## Versions
 
-{% hint style="info" %}
-See [Install Requirements](install-requirements.md) if you are having problems with sprites, textures or other application issues.
-{% endhint %}
+- **TEdit 5** (current) — New Fluent Design UI, scripting engine, find/filter panels, auto-update
+- **TEdit 4** (archived) — Legacy documentation preserved via version switcher
 
-New to TEdit?  See the [Getting Started](basics/getting-started.md) sections.
+## Development
 
-Are you a pro looking for more tips? Try out [Plugins ](plugins/plugins.md)or [Clipboard](sidebar-tools/clipboard.md).
+Built with [Docusaurus 3](https://docusaurus.io/).
 
+```bash
+npm install
+npm start        # Dev server at http://localhost:3000
+npm run build    # Production build
+```
+
+## Structure
+
+```
+docs/               # TEdit 5 documentation (current version)
+versioned_docs/     # TEdit 4 documentation (snapshotted)
+static/img/v4/      # TEdit 4 screenshots
+static/img/v5/      # TEdit 5 screenshots
+```
+
+## Contributing
+
+Pull requests welcome. For major changes, open an issue first.
+
+## Links
+
+- [Download TEdit](https://github.com/TEdit/Terraria-Map-Editor/releases/latest)
+- [Discord](https://discord.gg/SrwYZU2GDY)
+- [Report Issues](https://github.com/TEdit/Terraria-Map-Editor/issues)
