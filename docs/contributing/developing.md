@@ -14,7 +14,7 @@ TEdit is open source and contributions are welcome.
 ## Prerequisites
 
 - **Visual Studio 2022** (17.8+) or **JetBrains Rider**
-- **.NET 9 SDK** — [Download](https://dotnet.microsoft.com/download/dotnet/9.0)
+- **.NET 10 SDK** — [Download](https://dotnet.microsoft.com/download/dotnet/10.0)
 - **Git**
 
 ## Building

@@ -20,7 +20,7 @@ To load up the editor, if using Windows you can find it under All Programs in th
 
 You can also start the program from the folder it was installed in - it should be named TEdit.exe and display the TEdit custom icon:
 
-![te4-icon](/img/te4.png)
+![te4-icon](/img/v4/te4.png)
 
 ## Moving around in the Editor
 

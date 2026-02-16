@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Logs are located in `%appdata%\TEdit\Logs`
 
-![Logs Path](/img/troubleshooting_logs_path.png)
+![Logs Path](/img/v4/troubleshooting_logs_path.png)
 
 ## Step 2: Check Requirements
 

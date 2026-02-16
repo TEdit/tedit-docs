@@ -4,26 +4,40 @@ sidebar_position: 2
 
 # Install Requirements
 
-Download the latest release from [https://github.com/TEdit/Terraria-Map-Editor/releases/latest](https://github.com/TEdit/Terraria-Map-Editor/releases/latest).
-
 :::info
 On Mac, Linux, or Mobile? Try the browser editor at [https://www.terraria-map-editor.com](https://www.terraria-map-editor.com).
 :::
 
 ## Installation
 
+TEdit 5 uses [Velopack](https://velopack.io/) for installation and automatic updates.
+
+1. Download `TEdit-Setup.exe` from the [latest release](https://github.com/TEdit/Terraria-Map-Editor/releases/latest)
+2. Run the installer — TEdit is installed to your local app data folder automatically
+3. Launch TEdit from the Start Menu or desktop shortcut
+
+That's it. Future updates are downloaded and applied automatically (see [Auto-Update](advanced/auto-update.md)).
+
+:::tip
+If you previously used the manual zip install, you can switch to the Velopack installer. The old folder can be deleted after confirming the new install works.
+:::
+
+### Manual / Portable Install
+
+If you prefer not to use the installer:
+
 1. Download the `TEdit-x.x.x-win-x64.zip` from the latest release
 2. Unzip to an empty folder with write access, such as `C:\Games\TEdit`
 3. Launch `TEdit.exe`
 
 :::warning
-Delete old versions from the folder before extracting a new release.
+The portable zip version does not support automatic updates. You'll need to download new releases manually.
 :::
 
 ## Requirements
 
 - **Windows 10/11 x64** (earlier versions are not supported)
-- **.NET 9 Desktop Runtime** — [Download here](https://dotnet.microsoft.com/download/dotnet/9.0)
+- **.NET 10 Desktop Runtime** — included with the Velopack installer. For portable installs, [download here](https://dotnet.microsoft.com/download/dotnet/10.0).
 - **DirectX 11** compatible GPU with up-to-date drivers
 
 ## Sprite Viewing

@@ -22,13 +22,13 @@ Note: .bak files are nearly always better to use as a recovery, but in the case 
 
 1. Open the file in TEdit, you will receive a prompt similar to the following
 
-   ![recovery-prompt](/img/recovery-load.png)
+   ![recovery-prompt](/img/v4/recovery-load.png)
 
 2. TEdit will load what data is available and render the map. This may result in some portions of the map not being rendered if they are missing from the file. Here is an example where the file was cut off mid save, and only some of the tile data was in the file.
 
-   ![partial world](/img/recovery-render.png)
+   ![partial world](/img/v4/recovery-render.png)
 
 3. Note: file data has tiles before chests, so if your file is cut off mid-tile stream bestiary, signs, chests, mannequin, items frames, etc will be empty.
 4. Once you locate the data you wish to recovery, use the clipboard to copy/paste your build to a new world. You can use Terraria to regenerate the terrian by copying the seed from TEdit.
 
-   ![](/img/recovery-seed.png)
+   ![](/img/v4/recovery-seed.png)

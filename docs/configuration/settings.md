@@ -38,7 +38,12 @@ General application behavior and update preferences.
 
 | Setting | Description |
 |---------|-------------|
+| **Error Reporting** | Send anonymous crash and error reports to help improve TEdit. No personal data or world content is included — only stack traces and basic system info. |
 | **Terraria Path** | Path to Terraria content files (for sprite rendering) |
+
+:::info
+Error reporting is opt-in. You can disable it at any time. Reports are used solely to identify and fix bugs.
+:::
 
 ### Rendering & Layers
 

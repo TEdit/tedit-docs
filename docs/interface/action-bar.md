@@ -7,7 +7,7 @@ description: Top panel — paint mode, brush settings, tile selectors
 
 The action bar sits below the menu and changes based on the selected tool. It contains paint mode selection, brush settings, tile/wall pickers, and tool-specific options.
 
-![Action Bar](/img/v5/interface/tile-bar-and-menu.png)
+![Action Bar](/img/v5/interface/brush-tile-mode-options.png)
 
 ## Components
 

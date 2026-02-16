@@ -6,7 +6,7 @@ sidebar_position: 3
 
 The tool section is located on the left of the editor, below the basic menu buttons.
 
-![Toolbar](/img/toolbar_full.png)
+![Toolbar](/img/v4/toolbar_full.png)
 
 ## Arrow Tool [A]
 
@@ -19,7 +19,7 @@ The arrow tool looks like an arrow cursor, the same as the one your used to usin
 | `hover`      | Show tile info in [Information Bar](menu-and-info-bars.md#info-bar). |
 | `rightclick` | Show chest or sign editor for tile under cursor.                     |
 
-![](/img/tedit_arrow_tool.png)
+![](/img/v4/tedit_arrow_tool.png)
 
 With the arrow tool selected it is impossible to make any accidental changes to the map and it should only display a 1x1 template. This make the arrow tool useful for getting information from individual tiles via the [Information Bar](menu-and-info-bars.md#info-bar), which is displayed in the bottom left corner.
 
@@ -29,7 +29,7 @@ With the arrow tool selected you can also right-click on chests and signs to see
 
 The selection tool button looks like a blue square.
 
-![](/img/tedit_selection_tool.png)
+![](/img/v4/tedit_selection_tool.png)
 
 #### Options
 
@@ -45,11 +45,11 @@ When using this tool you can select a section of the map (as a rectangle) by hol
 
 Here is a selection rectangle drawn in some empty space/air:
 
-![](/img/tedit_selection_area.png)
+![](/img/v4/tedit_selection_area.png)
 
 While there is a selection rectangle present painting can only be done inside that area; if you want to paint elsewhere you must first remove the rectangle. You can do this by right-clicking when you are using the tool.
 
-![](/img/tedit_selection_drawing.png)
+![](/img/v4/tedit_selection_drawing.png)
 
 This tool is also used to copy part of the map. To do this select what you want to copy, then use the copy button on the toolbar, the copy function in the `menubar`, or press `ctrl+c`.
 
@@ -76,7 +76,7 @@ The picker tool uses the [Paint Mode](active-tray.md#tile-and-wall-options) to s
 
 The pencil tool looks like a pencil.
 
-![](/img/tedit_pencil_tool.png)
+![](/img/v4/tedit_pencil_tool.png)
 
 The pencil tool paints only one tile at a time. This makes it exceptionally useful for painting fine details or irregular shapes.
 
@@ -89,7 +89,7 @@ The pencil tool paints only one tile at a time. This makes it exceptionally usef
 | `rightclick+drag`           | Draw a horizontal straight line from starting y value. |
 | `leftclick+rightclick+drag` | Draw a vertical straight line from starting x value.   |
 
-![](/img/tedit_pencil_drawing.png)
+![](/img/v4/tedit_pencil_drawing.png)
 
 #### How To: Straight Line Drawing
 
@@ -117,11 +117,11 @@ The brush tool uses the [Paint Mode Tray](active-tray.md#tile-and-wall-options) 
 
 The brush tool looks like a brush.
 
-![](/img/tedit_brush_tool.png)
+![](/img/v4/tedit_brush_tool.png)
 
 The brush tool can paint a wide area of blocks.
 
-![](/img/tedit_brush_drawing.png)
+![](/img/v4/tedit_brush_drawing.png)
 
 Like the pencil tool, the brush can use the line drawing mouse buttons.
 
@@ -129,7 +129,7 @@ Like the pencil tool, the brush can use the line drawing mouse buttons.
 
 The fill tool looks like tipped bucket with paint coming out.
 
-![TEdit_Fill_Tool](/img/tedit_fill_tool.png)
+![TEdit_Fill_Tool](/img/v4/tedit_fill_tool.png)
 
 #### Options
 
@@ -140,21 +140,21 @@ The fill tool looks like tipped bucket with paint coming out.
 
 The fill tool replaces tiles, walls, liquids and empty space with other tiles, walls and liquids. Currently, you can do a contiguous fill. This means that all tiles, walls, liquids, and space of the type you have clicked on will be replaced as long as there is a connection to the original.
 
-![TEdit_Fill_Contiguous_Before](/img/tedit_fill_contiguous_before.png)
+![TEdit_Fill_Contiguous_Before](/img/v4/tedit_fill_contiguous_before.png)
 
-![TEdit_Fill_Contiguous_After](/img/tedit_fill_contiguous_after.png)
+![TEdit_Fill_Contiguous_After](/img/v4/tedit_fill_contiguous_after.png)
 
 You can also use the selection tool to contain a fill action.
 
-![TEdit_Fill_Selection](/img/tedit_fill_selection.png)
+![TEdit_Fill_Selection](/img/v4/tedit_fill_selection.png)
 
 The fill tool use the [Paint Mode Tray](active-tray.md#tile-and-wall-options) to select what to paint.
 
 ## Point Tool [P]
 
-![Point Tool](/img/toolbar_point_tool.png)
+![Point Tool](/img/v4/toolbar_point_tool.png)
 
-![Point Tool Selected](/img/active_tray_point_selected.png)
+![Point Tool Selected](/img/v4/active_tray_point_selected.png)
 
 #### Options
 
@@ -164,7 +164,7 @@ The fill tool use the [Paint Mode Tray](active-tray.md#tile-and-wall-options) to
 
 This tool places points on the map by chooses the point from the drop down menu and left-clicking on the map where you want it. The points that the tool places look like this on the map:
 
-![TEdit_Spawn_Point_Drawing](/img/tedit_spawn_point_drawing.png)
+![TEdit_Spawn_Point_Drawing](/img/v4/tedit_spawn_point_drawing.png)
 
 The spawn point is where people first load up (if they have not set a bed). This tool is useful if your town is not near the default spawn point, or if you are doing a custom map and want them to start in a particular place. Make sure it is not placed on/near any tiles you wish to keep however, since the game destroys any tiles (but not sprites or walls) that are located at the spawn point when someone enters the game there.
 
@@ -178,7 +178,7 @@ The Old Man point is particularly useful as you can have him spawn in or near an
 
 This tool looks like a black square with an 'S' in the middle.
 
-![sprite-tool](/img/sprite-tool2.png)
+![sprite-tool](/img/v4/sprite-tool2.png)
 
 #### Options
 
@@ -203,9 +203,9 @@ Use the drop down to select a tile type, then the grid to select a style. All st
 
 ## Morph Tool
 
-![Morph Tool](/img/toolbar_morph_tool.png)
+![Morph Tool](/img/v4/toolbar_morph_tool.png)
 
-![Morph Tool Selected](/img/active_tray_morph_selected.png)
+![Morph Tool Selected](/img/v4/active_tray_morph_selected.png)
 
 #### Options
 

@@ -7,6 +7,8 @@ description: Bottom info bar — coordinates, tile info, zoom
 
 The status bar runs along the bottom of the editor and shows context about what's under your cursor.
 
+![Status Bar](/img/v5/interface/status-bar.png)
+
 ## Information Displayed
 
 | Field | Description |

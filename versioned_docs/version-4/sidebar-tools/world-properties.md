@@ -6,11 +6,11 @@ sidebar_position: 1
 
 If you do not see the world properties panel (located on the right-hand side of the editor) you may have to click the utilities button (also located on the right) to make it 'pop out'.
 
-![Utilities Button](/img/tedit_utilities_button.png)
+![Utilities Button](/img/v4/tedit_utilities_button.png)
 
 ## World Name and ID
 
-![World Name](/img/tedit_world_name.png)
+![World Name](/img/v4/tedit_world_name.png)
 
 The world name is simply whatever you called your world. It used to be the case that just editing this would allow you change your world name and it would stay that way. However, in one of the Terraria patches this changed.
 
@@ -22,7 +22,7 @@ Regarding the world id, this is purely informative. It is not editable because w
 
 ## Moon Phase
 
-![Moon Phase](/img/tedit_moon_phase.png)
+![Moon Phase](/img/v4/tedit_moon_phase.png)
 
 If you look carefully you will notice the ingame moon changes each night from new moon to full moon and back! This option changes the current moon - maybe your custom map is werewolf themed???
 
@@ -32,7 +32,7 @@ The "Is Eclipse" option starts a [solar eclipse](http://terraria.gamepedia.com/S
 
 ## Time
 
-![Time](/img/tedit_time.png)
+![Time](/img/v4/tedit_time.png)
 
 This scale represents the time of day/night it is ingame. Move it to where you desire. The Is Day Time checkbox allows you to switch between whether the slider represents day or night, and the slider background will change to show this. The slider basically represents a 12-hour period; that period could be the day period or it could be the night period, based on whether the checkbox is ticked or not.
 
@@ -48,19 +48,19 @@ Can be used in conjunction with rain. Consists of two scales, one for the number
 
 ## Smashed Orbs
 
-![Smashed Orbs](/img/tedit_smashed_orbs.png)
+![Smashed Orbs](/img/v4/tedit_smashed_orbs.png)
 
 When 3 Shadow Orbs are smashed the Eater of Worlds comes after you, apparently he prefers to eat pesky heroes instead of worlds these days! Also, some events require a shadow orb to have been smashed.
 
 ## Spawn Meteor
 
-![Spawn Meteor](/img/tedit_spawn_meteor.png)
+![Spawn Meteor](/img/v4/tedit_spawn_meteor.png)
 
 Like the blood moon, next night you are ingame say goodbye to your house. No no that will never happen. Spawn that meteor, go ahead.
 
 ## Surface and Bedrock Level
 
-![Levels](/img/tedit_surface_bedrock_level.png)
+![Levels](/img/v4/tedit_surface_bedrock_level.png)
 
 This setting lets you choose the y-coordinate (that is, the vertical height) where the [world layers](http://terraria.gamepedia.com/Layers) begin. The Surface Level is "Level" height in the game; above it is the surface world. Between the surface and bedrock is the Underground layer; it is the brown background area with inset stones that can not be removed (normally). The Bedrock is the top of the Cavern layer; it is the grey background area with inset stones that also can not be removed.
 
@@ -68,7 +68,7 @@ This setting could be useful in a totally underground map, or for one that had l
 
 ## Bosses Downed
 
-![Bosses](/img/tedit_boss_dead.png)
+![Bosses](/img/v4/tedit_boss_dead.png)
 
 These options tell the game if that boss has been killed or not. Some ingame events are based on this, like certain NPCs moving in, chance for Cthulhu to show up, etc. Also, if Skeletron is dead the Old Man wont show up at the dungeon point and you can't fight him again... unless you revive him with the editor!
 
@@ -78,7 +78,7 @@ Like the Bosses Downed options, these tell the game if you have "saved" the NPCs
 
 ## Goblin Invasion
 
-![Goblins](/img/tedit_goblin_invasion.png)
+![Goblins](/img/v4/tedit_goblin_invasion.png)
 
 The Invasion options are for goblin related mischief. The Invasion Type can be set to 0 or 1 and represents if there is an invasion or not.
 

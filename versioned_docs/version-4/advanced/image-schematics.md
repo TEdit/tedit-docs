@@ -14,11 +14,11 @@ File Format: 24 bit PNG Image
 
 False Color
 
-![falsecolor](/img/falsecolor.png)
+![falsecolor](/img/v4/falsecolor.png)
 
 Real Color
 
-![falsecolor](/img/realcolor.png)
+![falsecolor](/img/v4/realcolor.png)
 
 False color png uses color channels to store tile data, so you can add liquid, walls, wires etc. Note, the importer will ignored sprite tile ids and other tile ids that require UV coordinates.
 

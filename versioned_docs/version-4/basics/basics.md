@@ -23,7 +23,7 @@ As mentioned in the intro, in the editor you can place liquids in places they no
 
 As mentioned, liquids can only be painted where there are no tiles. You can not overwrite tiles with liquids in the editor - you must erase the tiles first. However, liquids will draw over other liquids. Note how in this picture the tiles have not been changed when painted over with liquids:
 
-![liquid](/img/tedit_liquid_painting.png)
+![liquid](/img/v4/tedit_liquid_painting.png)
 
 ## Sprites
 

@@ -11,12 +11,12 @@ If you are on Mac OS, Linux or Mobile, you may wish to try the lightweight brows
 :::
 
 * Scroll to the bottom, and ensure you download the TEdit(version).zip File  
-  ![Download TEdit Version](/img/install_download_version.png)
+  ![Download TEdit Version](/img/v4/install_download_version.png)
 * Unzip the download to an _empty_ folder **with write access**, such as `c:\games\TEdit`.  
-  ![Unzip Folder](/img/install_unzip_folder.png)
+  ![Unzip Folder](/img/v4/install_unzip_folder.png)
 * NOTE: you may need to delete OLD versions of files from this folder first.
 * Launch the exe file  
-  ![Launch Exe](/img/install_launch_exe.png)
+  ![Launch Exe](/img/v4/install_launch_exe.png)
 
 ## REQUIRED
 
@@ -40,9 +40,9 @@ These are requirements these, if you are having issues please uninstall/reinstal
 
     NOTE: Remove the `<!--` and `-->` to uncomment the line
 
-![](/img/altc.png)
+![](/img/v4/altc.png)
 
-![](/img/gog.png)
+![](/img/v4/gog.png)
 
 ## Known Limitations
 

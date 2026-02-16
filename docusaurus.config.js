@@ -7,7 +7,7 @@ const config = {
   tagline: 'Terraria Map Editor - Official Documentation',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.binaryconstruct.com/',
+  url: 'https://docs.tedit.dev/',
   baseUrl: '/',
 
   organizationName: 'TEdit',
@@ -34,15 +34,15 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
           editUrl: 'https://github.com/TEdit/tedit-docs/tree/main/',
-          lastVersion: '4',
+          lastVersion: 'current',
           versions: {
             current: {
               label: 'TEdit 5',
-              path: 'next',
-              banner: 'unreleased',
+              path: '/',
             },
             '4': {
               label: 'TEdit 4',
+              banner: 'unmaintained',
             },
           },
         },
@@ -62,12 +62,12 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-      image: 'img/tedit-social-card.png',
+      image: 'img/te5-logo-hero.png',
       navbar: {
         title: 'TEdit',
         logo: {
           alt: 'TEdit Logo',
-          src: 'img/te4.png',
+          src: 'img/favicon-96x96.png',
         },
         items: [
           {
@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/basics/getting-started',
+                to: '/getting-started',
               },
               {
                 label: 'Install Requirements',

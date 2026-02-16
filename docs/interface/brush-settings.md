@@ -9,8 +9,6 @@ The brush settings panel appears in the action bar when using the Brush, Morph, 
 
 ![Brush Size Options](/img/v5/interface/brush-size-options.png)
 
-![Brush Shape](/img/v5/interface/brush-shape-and-size.png)
-
 ## Size
 
 - **Width** — 1 to 400 tiles (default: 20)

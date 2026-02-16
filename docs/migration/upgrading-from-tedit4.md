@@ -33,7 +33,7 @@ TEdit 5 is a major rewrite with a modernized UI and new features. Here's what ch
 
 | | TEdit 4 | TEdit 5 |
 |---|---------|---------|
-| **Framework** | .NET Framework 4.8 | .NET 9+ |
+| **Framework** | .NET Framework 4.8 | .NET 10 |
 | **DirectX** | DirectX 11 | DirectX 11 |
 | **OS** | Windows 10 x64 | Windows 10/11 x64 |
 

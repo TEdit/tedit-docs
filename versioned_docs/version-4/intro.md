@@ -12,7 +12,7 @@ To download TEdit visit [https://github.com/TEdit/Terraria-Map-Editor/releases/l
 
 TEdit - Terraria Map Editor is a stand alone, open source map editor for Terraria. It lets you edit maps just like paint! It also lets you change world settings, time, bosses downed, edit chests, sign, make epic dungeons, castles, cities, and add rewards for your adventurers!
 
-![TEdit Screenshot](/img/tedit_screenshot.png)
+![TEdit Screenshot](/img/v4/tedit_screenshot.png)
 
 :::info
 See [Install Requirements](install-requirements.md) if you are having problems with sprites, textures or other application issues.

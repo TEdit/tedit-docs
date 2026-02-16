@@ -10,7 +10,7 @@ To modify TEdit source you will need a few things:
 * [Dotnet Core SDK](https://dotnet.microsoft.com/download)
 * [.Net Framework Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer)
 
-  ![dotnet downloads](/img/dotnet-download.png)
+  ![dotnet downloads](/img/v4/dotnet-download.png)
 
 * Git - try [GitHub Desktop](https://desktop.github.com/) or [Git Extensions](https://gitextensions.github.io/)
 
@@ -20,7 +20,7 @@ _Note: VSCode does not support modifying the UI_
 
 See [GitHub Documents](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) for the current method of forking the TEdit repository [https://github.com/TEdit/Terraria-Map-Editor.git](https://github.com/TEdit/Terraria-Map-Editor.git).
 
-![fork-tedit](/img/fork-tedit.png)
+![fork-tedit](/img/v4/fork-tedit.png)
 
 Use git to clone the repository to your local machine. Pick a folder and execute the following command:
 `git clone https://github.com/TEdit/Terraria-Map-Editor.git`.
@@ -31,7 +31,7 @@ You can use ssh or git extensions if you have those set up. For for detailed ins
 
 Open the folder you cloned TEdit source code, navigate to the `src` folder and double click `TEdit.sln`
 
-![open Tedit.sln](/img/open-teditsln.png)
+![open Tedit.sln](/img/v4/open-teditsln.png)
 
 ## Making a change
 

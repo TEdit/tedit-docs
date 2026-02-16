@@ -16,7 +16,7 @@ The Menu Bar is located at the top left of the editor.
 
 The file menu has your usual file related functions; New, Open, Save, Save As, and Exit. Some of these functions are also on the [Toolbar](toolbar.md) and have [Shortcuts and Keybindings](../configuration/shortcuts-and-keybindings.md).
 
-![File Menu](/img/menu_file.png)
+![File Menu](/img/v4/menu_file.png)
 
 #### New Function
 
@@ -42,7 +42,7 @@ Exit quits the program.
 
 ### Edit
 
-![Edit Menu](/img/menu_edit.png)
+![Edit Menu](/img/v4/menu_edit.png)
 
 The Edit menu is full of basic functions like Undo, Redo, Copy, Paste, Delete. These functions are also on the toolbar and have [shortcuts](../configuration/shortcuts-and-keybindings.md).
 
@@ -54,60 +54,60 @@ Copy temporarily saves the selection you have (using the [Selection Tool](toolba
 
 ### Layers
 
-![Layers Menu](/img/menu_layers.png)
+![Layers Menu](/img/v4/menu_layers.png)
 
 ### Plugins
 
-![Plugins Menu](/img/menu_plugins.png)
+![Plugins Menu](/img/v4/menu_plugins.png)
 
 ### Help
 
-![Help Menu](/img/menu_help.png)
+![Help Menu](/img/v4/menu_help.png)
 
 ## Info Bar
 
 Starting from the left, the Information Bar comprises of the Position Box, the Tile Box, the Wall Box, the Extra Box, and the Frame Box.
 
-![Info Bar](/img/infobar_full.png)
+![Info Bar](/img/v4/infobar_full.png)
 
 ### Position Box
 
-![Position Box](/img/infobar_position.png)
+![Position Box](/img/v4/infobar_position.png)
 
 This box gives information on the current position of the cursor on the map. The first number is the x-axis co-ordinate and the second number is the y-axis co-ordinate. The top-left is 0,0.
 
 ### Tile Box
 
-![Tile Box](/img/infobar_tile.png)
+![Tile Box](/img/v4/infobar_tile.png)
 
 The Tile Box gives you information on which tile type is located underneath the cursor.
 
 ### Wall Box
 
-![Wall Box](/img/infobar_wall.png)
+![Wall Box](/img/v4/infobar_wall.png)
 
 The Wall Box gives you information on which wall type is located underneath the cursor.
 
 ### Extra box
 
-![Extra Box](/img/infobar_extra.png)
+![Extra Box](/img/v4/infobar_extra.png)
 
 The Extra Box gives you information on whether there is a liquid and/or wire located underneath the cursor. The number next to a liquid is the amount of liquid in that block, where 255 represents a full block of liquid.
 
 ### Frame Box
 
-![Frame Box](/img/infobar_frame.png)
+![Frame Box](/img/v4/infobar_frame.png)
 
 The Frame Box gives information about the framing of the tile beneath the cursor. This is useful for the developers but not so much for the users of the editor.
 
 ### Paint Color Box
 
-![Paint Color Box](/img/infobar_paint_color.png)
+![Paint Color Box](/img/v4/infobar_paint_color.png)
 
 The Paint Color Box shows the paint colors of the tile or wall under the cursor.
 
 ### Selection Box
 
-![Selection Box](/img/infobar_selection.png)
+![Selection Box](/img/v4/infobar_selection.png)
 
 The selection box shows the size of the current marquee selection. If the box is highlighted yellow, the selection is active and editing can only be done inside the selection. You may also copy the contents of the selection to the clipboard with `ctrl+c`
