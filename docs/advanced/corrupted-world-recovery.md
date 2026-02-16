@@ -1,34 +1,29 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
+description: Recovering corrupted Terraria world files
 ---
 
 # Corrupted World Recovery
 
-## Load a Backup
+If your Terraria world file is corrupted and won't load in-game, TEdit may still be able to open and repair it.
 
-Do you have a broken world file? Try your backup first. Terraria and TEdit both make backups of world files, Try locating your .wld, .bak and .TEdit files the following locations:
+## Steps
 
-* `%USERPROFILE%\Documents\My Games\Terraria\Worlds`
-* [Steam Cloud Support](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941)
-  * **Windows**: `C:\Program Files (x86)\Steam\userdata\<userID>\105600\remote\worlds`
-  * **Mac**: `~/Library/Application Support/Steam/userdata/<userID>/105600/remote/worlds`
-  * **Linux**: `~/.local/share/Steam/userdata/<userID>/105600/remote/worlds`
+1. **Open the world in TEdit** — TEdit can sometimes load worlds that Terraria rejects
+2. **Inspect for damage** — Look for missing chunks, scrambled tiles, or holes in terrain
+3. **Repair manually** — Use the Brush and Fill tools to patch damaged areas
+4. **Save As a new file** — Don't overwrite the original in case you need to try again
 
-## TEdit Recovery Process
+## Terraria Backup Files
 
-TEdit has the capability to load partial or corrupted world files due to bad saves, crashes or power outages. You can use this feature to recover parts of your world if you have a bad file that will not load in Terraria.
+Terraria automatically creates `.wld.bak` backup files. Check your worlds folder:
 
-Note: .bak files are nearly always better to use as a recovery, but in the case you don't have the .bak or otherwise need to recover a file you may use this method.
+`Documents\My Games\Terraria\Worlds`
 
-1. Open the file in TEdit, you will receive a prompt similar to the following
+Rename the `.wld.bak` file to `.wld` to try loading the backup.
 
-   ![recovery-prompt](/img/recovery-load.png)
+## Prevention
 
-2. TEdit will load what data is available and render the map. This may result in some portions of the map not being rendered if they are missing from the file. Here is an example where the file was cut off mid save, and only some of the tile data was in the file.
-
-   ![partial world](/img/recovery-render.png)
-
-3. Note: file data has tiles before chests, so if your file is cut off mid-tile stream bestiary, signs, chests, mannequin, items frames, etc will be empty.
-4. Once you locate the data you wish to recovery, use the clipboard to copy/paste your build to a new world. You can use Terraria to regenerate the terrian by copying the seed from TEdit.
-
-   ![](/img/recovery-seed.png)
+- Always use **Save As** to create backups before major edits
+- Enable **Autosave** in [Settings](../configuration/settings.md)
+- Keep copies of important worlds in a separate folder

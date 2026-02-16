@@ -1,23 +1,31 @@
 ---
 sidebar_position: 1
-description: TEdit - Terraria Map Editor
+description: TEdit 5 - Terraria Map Editor
 slug: /
 ---
 
-# TEdit Documentation
+# TEdit 5 Documentation
 
 :::tip Download
-To download TEdit visit [https://github.com/TEdit/Terraria-Map-Editor/releases/latest](https://github.com/TEdit/Terraria-Map-Editor/releases/latest).
+Get TEdit at [https://github.com/TEdit/Terraria-Map-Editor/releases/latest](https://github.com/TEdit/Terraria-Map-Editor/releases/latest).
 :::
 
-TEdit - Terraria Map Editor is a stand alone, open source map editor for Terraria. It lets you edit maps just like paint! It also lets you change world settings, time, bosses downed, edit chests, sign, make epic dungeons, castles, cities, and add rewards for your adventurers!
+TEdit 5 is a complete redesign of the Terraria Map Editor. Edit worlds like paint — place tiles, walls, liquids, and wire with brushes and fills. Edit chests, signs, and NPCs. Build epic dungeons, castles, cities, and adventure maps.
 
-![TEdit Screenshot](/img/tedit_screenshot.png)
+**What's new in TEdit 5:**
+
+- **Fluent Design** — Modern WPF-UI interface with dark mode
+- **Scripting** — Write JavaScript or Lua scripts to automate edits
+- **Find Panel** — Search your world for items, tiles, walls, and sprites
+- **Filter Panel** — Hide or grayscale specific tile types for clearer editing
+- **Localization** — UI translated into 13 languages
+- **Auto-Update** — Stable, Beta, and Alpha update channels via Velopack
+- **Modernized Settings** — Searchable, categorized settings window
 
 :::info
-See [Install Requirements](install-requirements.md) if you are having problems with sprites, textures or other application issues.
+Having issues? See [Install Requirements](install-requirements.md) for setup help.
 :::
 
-New to TEdit? See the [Getting Started](basics/getting-started.md) sections.
+New to TEdit? Start with [Getting Started](getting-started.md).
 
-Are you a pro looking for more tips? Try out [Plugins](plugins/plugins.md) or [Clipboard](sidebar-tools/clipboard.md).
+Looking for TEdit 4 docs? Use the version dropdown in the navbar.

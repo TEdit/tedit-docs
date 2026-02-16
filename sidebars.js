@@ -4,7 +4,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'intro',
-      label: 'TEdit Documentation',
+      label: 'TEdit 5 Documentation',
     },
     {
       type: 'doc',
@@ -12,32 +12,34 @@ const sidebars = {
       label: 'Install Requirements',
     },
     {
+      type: 'doc',
+      id: 'getting-started',
+      label: 'Getting Started',
+    },
+    {
       type: 'category',
-      label: 'Basics',
+      label: 'Interface',
       items: [
-        'basics/getting-started',
-        'basics/basics',
-        'basics/toolbar',
-        'basics/active-tray',
-        'basics/menu-and-info-bars',
-        'basics/tips',
+        'interface/overview',
+        'interface/toolbar',
+        'interface/action-bar',
+        'interface/paint-mode',
+        'interface/brush-settings',
+        'interface/status-bar',
       ],
     },
     {
       type: 'category',
-      label: 'Sidebar Tools',
+      label: 'Sidebar Panels',
       items: [
-        'sidebar-tools/world-properties',
-        'sidebar-tools/clipboard',
-        'sidebar-tools/chest-editor',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Plugins',
-      items: [
-        'plugins/plugins',
-        'plugins/house-generator-plugin',
+        'sidebar-panels/overview',
+        'sidebar-panels/clipboard',
+        'sidebar-panels/world-properties',
+        'sidebar-panels/special-tiles',
+        'sidebar-panels/sprites',
+        'sidebar-panels/find',
+        'sidebar-panels/filter',
+        'sidebar-panels/scripting',
       ],
     },
     {
@@ -45,18 +47,35 @@ const sidebars = {
       label: 'Configuration',
       items: [
         'configuration/settings',
+        'configuration/keybindings',
         'configuration/saves-and-backups',
-        'configuration/shortcuts-and-keybindings',
+        'configuration/localization',
       ],
     },
     {
       type: 'category',
       label: 'Advanced',
       items: [
-        'advanced/developing-and-contributing-to-tedit',
+        'advanced/scripting-guide',
+        'advanced/image-schematics',
+        'advanced/world-analysis',
+        'advanced/auto-update',
         'advanced/troubleshooting',
         'advanced/corrupted-world-recovery',
-        'advanced/image-schematics',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Migration',
+      items: [
+        'migration/upgrading-from-tedit4',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Contributing',
+      items: [
+        'contributing/developing',
       ],
     },
   ],

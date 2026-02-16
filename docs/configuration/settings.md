@@ -1,64 +1,51 @@
 ---
 sidebar_position: 1
+description: Settings window — all configurable options
 ---
 
 # Settings
 
-You may customize the default settings of TEdit by editing the `settings.xml` file.
+Open Settings from the menu bar: **Edit > Settings** or use the keyboard shortcut.
 
-## App
+![Settings Window](/img/v5/configuration/settings.png)
 
-### Size
+TEdit 5 features a completely redesigned settings window with search and categorized sections.
 
-If you wish to change TEdit's default size when launched, edit the `<App>` Width and Height values.
+## Using Settings
 
-### Steam Cloud
+- **Search** — Type in the search bar to find any setting by name
+- **Categories** — Settings are grouped into expandable sections
+- **Save / Cancel** — Apply or discard changes
 
-_In an upcoming release:_ When opening and saving worlds, TEdit defaults to your local world's folder. If you use Steam Cloud to save your worlds, you may uncomment the `<SteamUserId>` setting and TEdit will default to your Steam Cloud location. If you have more than one Steam user on your computer, you will need to explicitly set your Steam UserID. Example: `<SteamUserId>12345</SteamUserId>`
+## Categories
 
-It is highly recommended you exit the Terraria game, not just the player/world, before editing Steam Cloud games with TEdit. Make sure you understand how TEdit manages [Saves and Backups](saves-and-backups.md).
+### General
 
-## Shortcut Keys
+General application behavior and update preferences.
 
-The default keys for shortcuts are defined in the lines between `<ShortCutKeys>...</ShortCutKeys>`. For example:
+![General Settings](/img/v5/configuration/settings-general-and-update-channel.png)
 
-`<Shortcut Key="`**A**`" Tool="Arrow" />`
+| Setting | Description |
+|---------|-------------|
+| **Autosave** | Automatically save periodically |
+| **Check Updates** | Check for new versions on startup |
+| **Update Channel** | Stable, Beta, or Alpha releases |
+| **Language** | UI language (see [Localization](localization.md)) |
 
-By changing the "A" in the example above, you can change the shortcut key for the Arrow tool to another key.
+### Privacy & Paths
 
-## Tools
+![Privacy & Paths](/img/v5/configuration/settings-privacy-paths.png)
 
-The default settings for different Tools are defined in the lines between `...`
+| Setting | Description |
+|---------|-------------|
+| **Terraria Path** | Path to Terraria content files (for sprite rendering) |
 
-### Paint Mode
+### Rendering & Layers
 
-`<Tool Name="Paint" Mode="`**Tile**`" />`
+![Rendering](/img/v5/configuration/settings-rendering-layers.png)
 
-Valid Paint Modes are **Tile**, **Wall**, **TileAndWall**, **Wire** and **Liquid**.
-
-### Tiles, Walls, Masks
-
-`<Tool Name="Tile" Tile="`**0**`" Mask="`**0**`" Mode="Off" />`\
-`<Tool Name="Wall" Wall="`**0**`" Mask="`**0**`" Mode="Off" />`\
-You can change the default Tiles, Walls and Masks by changing the bolded values above. You can get those values by looking at the dropdowns within the tool.
-
-For example, Tile 0 is Dirt Block and Wall 0 is the Sky. You can change the Tile to Stone Block by changing the Tile value from to 1, and the Wall to Wood Wall by changing the Wall value to 4.
-
-### Mask Mode
-
-By default, Tile and Wall Masks are disabled. You can change the setting by changing the Mode:
-
-`<Tool Name="Tile" Tile="0" Mask="0" Mode="`**Off**`" />`\
-`<Tool Name="Wall" Wall="0" Mask="0" Mode="`**Off**`" />`
-
-The values can be **Off** (Disable Mask), **Empty** (Edit Empty Tiles) or **Tile** (Edit Matching Tiles).
-
-### Brush
-
-`<Tool Name="Brush" Width="`**20**`" Height="`**20**`" Outline="`**1**`" Shape="Square" />`
-
-You can change the default brush size by editing the bolded values above.
-
-`<Tool Name="Brush" Width="20" Height="20" Outline="1" Shape="`**Square**`" />`
-
-You can change the default brush shape by editing the Shape value. Valid values are **Square** and **Round**.
+| Setting | Description |
+|---------|-------------|
+| **Realistic Colors** | Use realistic tile colors instead of map colors |
+| **Texture Visibility Zoom** | Zoom level at which sprite textures appear |
+| **Sprite Thumbnail Size** | Size of sprite previews in the sidebar |

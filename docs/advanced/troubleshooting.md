@@ -1,36 +1,45 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
+description: Common issues and fixes
 ---
 
 # Troubleshooting
 
-## Step 1: Check the Error Log
+## TEdit won't start
 
-Logs are located in `%appdata%\TEdit\Logs`
+- Make sure **.NET 9 Desktop Runtime** is installed: [Download](https://dotnet.microsoft.com/download/dotnet/9.0)
+- Check that your GPU supports **DirectX 11**
+- Update your graphics drivers to the latest stable version
+- Try running TEdit as administrator
 
-![Logs Path](/img/troubleshooting_logs_path.png)
+## No sprite textures / blank tiles
 
-## Step 2: Check Requirements
+Terraria must be installed for sprite rendering. If it's installed but textures are missing:
 
-* Check the [Install Requirements](../install-requirements.md) page for the requirements to run the editor.
-* If installing from a zip and not an installer, be sure you extracted all the contents of the zip file.
-* Make sure you have the latest version.
-* If you have a blank window, try re-installing Terraria through Steam.
-* Open task manager (CTRL+SHIFT+ESC), switch to the processes tab, sort by name and watch for TEdit.exe to verify the process starts.
+1. Open Settings and check the **Terraria Path** setting
+2. Make sure it points to `Terraria\Content` (the folder with `Images/`)
+3. Steam default: `Program Files (x86)\Steam\steamapps\common\Terraria\Content`
 
-## Step 3: Delete Cache
+## World won't open
 
-1. Delete the cache folder `%appdata%\tedit`
-2. Delete the settings folder `%localappdata%\tedit`
-3. Delete the folder you have unzipped TEdit into and download a fresh copy from [releases](https://github.com/TEdit/Terraria-Map-Editor/releases).
-4. Unzip the new download into an empty folder, such as `c:\games\tedit`.
+- Make sure it's an unmodded `.wld` file — TEdit doesn't support tModLoader or TConfig worlds
+- Try opening a different world to confirm TEdit works
+- Check if the file is corrupted — see [Corrupted World Recovery](corrupted-world-recovery.md)
 
-## Step 4: Discord or GitHub Issue
+## Crashes or freezing
 
-Join the [Discord Support Channel](https://discord.gg/SrwYZU2GDY) and ask for help!
+- Very large worlds may take time to load — be patient
+- Check the log file for error details (located in the TEdit installation folder)
+- Try closing other memory-intensive applications
+- Update to the latest TEdit version
 
-If it still doesn't work, create a ticket with the contents/link of your error log on [GitHub](http://github.com/BinaryConstruct/Terraria-Map-Editor/issues).
+## Performance is slow
 
-Include in your ticket any further information you can give that leads up to the problem as this may help narrow down the issue.
+- **Zoom out** — rendering many textures up close is GPU-intensive
+- Adjust **Texture Visibility Zoom Level** in Settings to reduce texture rendering at close zoom
+- Reduce **Sprite Thumbnail Size** in Settings
+- Make sure your graphics drivers are up to date
 
-You can find your log through TEdit's View Log option under Help, or in the `%appdata%\TEdit\Logs`. If the contents of `log.txt` is quite large it may be more useful to upload it to one of the paste sites.
+## Can't find a setting
+
+Use the **search bar** at the top of the Settings window to filter settings by name.

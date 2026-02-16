@@ -13,7 +13,7 @@ const config = {
   organizationName: 'TEdit',
   projectName: 'tedit-docs',
   onBrokenLinks: 'throw',
-  
+
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn'
@@ -34,6 +34,17 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
           editUrl: 'https://github.com/TEdit/tedit-docs/tree/main/',
+          lastVersion: '4',
+          versions: {
+            current: {
+              label: 'TEdit 5',
+              path: 'next',
+              banner: 'unreleased',
+            },
+            '4': {
+              label: 'TEdit 4',
+            },
+          },
         },
         blog: false,
         theme: {
@@ -64,6 +75,10 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
           },
           {
             href: 'https://github.com/TEdit/Terraria-Map-Editor/releases',
@@ -130,6 +145,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['lua', 'javascript'],
       },
     }),
 };
