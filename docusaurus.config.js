@@ -81,8 +81,13 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/TEdit/Terraria-Map-Editor/releases',
+            href: 'https://github.com/TEdit/Terraria-Map-Editor/releases/latest',
             label: 'Download',
+            position: 'right',
+          },
+          {
+            href: 'https://www.tedit.dev',
+            label: 'Web Editor',
             position: 'right',
           },
           {
