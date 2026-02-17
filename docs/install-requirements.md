@@ -18,9 +18,20 @@ TEdit 5 uses [Velopack](https://velopack.io/) for installation and automatic upd
 
 That's it. Future updates are downloaded and applied automatically (see [Auto-Update](advanced/auto-update.md)).
 
-:::note
-- If the installer prompts you to **repair**, click **Yes** to continue.
-- If **Windows SmartScreen** appears, click **More info** then **Run anyway** to proceed with the installation.
+### Windows SmartScreen
+
+If **Windows Defender SmartScreen** appears, click **More info** then **Run anyway** to proceed with the installation. TEdit is open-source but not yet code-signed, so Windows may flag the installer as unrecognized.
+
+![Windows SmartScreen dialog — click More info, then Run anyway](/img/v5/advanced/smartscreen.png)
+
+### Repair Install
+
+If TEdit is already installed, the installer will offer a **Repair** option. This erases the current installation and re-installs the latest version to `%LocalAppData%\TEdit`.
+
+![TEdit repair dialog](/img/v5/advanced/repair.png)
+
+:::tip Migrating from the old `%AppData%` install
+If you previously installed TEdit to `%AppData%\TEdit` (the legacy location), choose **Repair** to switch to the modern `%LocalAppData%\TEdit` install path. After confirming the new install works, you can safely delete the old `%AppData%\TEdit` folder.
 :::
 
 :::tip
