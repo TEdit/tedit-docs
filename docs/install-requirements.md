@@ -18,6 +18,11 @@ TEdit 5 uses [Velopack](https://velopack.io/) for installation and automatic upd
 
 That's it. Future updates are downloaded and applied automatically (see [Auto-Update](advanced/auto-update.md)).
 
+:::note
+- If the installer prompts you to **repair**, click **Yes** to continue.
+- If **Windows SmartScreen** appears, click **More info** then **Run anyway** to proceed with the installation.
+:::
+
 :::tip
 If you previously used the manual zip install, you can switch to the Velopack installer. The old folder can be deleted after confirming the new install works.
 :::

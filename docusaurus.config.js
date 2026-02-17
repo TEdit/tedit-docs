@@ -25,6 +25,16 @@ const config = {
     locales: ['en'],
   },
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        docsRouteBasePath: '/',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
