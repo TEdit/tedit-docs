@@ -99,7 +99,7 @@ The pencil tool paints only one tile at a time. This makes it exceptionally usef
 | Command                     | Activity                                               |
 | --------------------------- | ------------------------------------------------------ |
 | `leftclick+drag`            | Draw a line following cursor.                          |
-| `shift+leftclick`           | Draw a straight line between clicked points.           |
+| `shift+click`               | Polyline: each click draws from previous point. Shift+drag draws a single line from anchor. |
 | `rightclick+drag`           | Draw a horizontal straight line from starting y value. |
 | `leftclick+rightclick+drag` | Draw a vertical straight line from starting x value.   |
 
@@ -107,7 +107,8 @@ The pencil tool paints only one tile at a time. This makes it exceptionally usef
 
 #### How To: Straight Line Drawing
 
-* **Click start position, hold shift, click end position:** You can also draw a line from one point to another by clicking your starting point, holding Shift and clicking on your end point.
+* **Shift+click polyline:** Hold Shift and click sequentially to draw connected line segments. Click A, click B (draws A→B), click C (draws B→C), etc. Release Shift when done. Great for placing tracks, platforms, or any point-to-point path.
+* **Shift+drag:** Hold Shift and drag to draw a single straight line from the anchor point to the cursor position.
 * **Left Mouse Button**: you will have free drawing - i.e. you can draw in any way you like.
 * **Hold Right Mouse Button**: you can draw a straight horizontal line, perfect for bridges, tunnels, buildings, etc.
 * **Hold Left AND Right Mouse Button**: at the same time you can draw vertical straight lines.&#x20;
@@ -129,7 +130,7 @@ The brush tool uses the [Paint Mode Tray](active-tray.md#tile-and-wall-options) 
 | Command                     | Activity                                               |
 | --------------------------- | ------------------------------------------------------ |
 | `leftclick+drag`            | Draw a line following cursor.                          |
-| `shift+leftclick`           | Draw a straight line between clicked points.           |
+| `shift+click`               | Polyline: each click draws from previous point. Shift+drag draws a single line from anchor. |
 | `rightclick+drag`           | Draw a horizontal straight line from starting y value. |
 | `leftclick+rightclick+drag` | Draw a vertical straight line from starting x value.   |
 
@@ -204,7 +205,7 @@ This tool looks like a black square with an 'S' in the middle.
 | --------------------------- | --------------------------------------------------------------- |
 | `leftclick`                 | Place a single instance of the sprite under the cursor.         |
 | `leftclick+drag`            | Draw a line following cursor. **\[1]**                          |
-| `shift+leftclick`           | Draw a straight line between clicked points. **\[1]**           |
+| `shift+click`               | Polyline: each click draws from previous point. Shift+drag draws a single line from anchor. **\[1]** |
 | `rightclick+drag`           | Draw a horizontal straight line from starting y value. **\[1]** |
 | `leftclick+rightclick+drag` | Draw a vertical straight line from starting x value. **\[1]**   |
 |                             | **\[1]** _Applies to 1x1 sprites only._                         |
@@ -230,7 +231,7 @@ Use the drop down to select a tile type, then the grid to select a style. All st
 | Command                     | Activity                                               |
 | --------------------------- | ------------------------------------------------------ |
 | `leftclick+drag`            | Draw a line following cursor.                          |
-| `shift+leftclick`           | Draw a straight line between clicked points.           |
+| `shift+click`               | Polyline: each click draws from previous point. Shift+drag draws a single line from anchor. |
 | `rightclick+drag`           | Draw a horizontal straight line from starting y value. |
 | `leftclick+rightclick+drag` | Draw a vertical straight line from starting x value.   |
 
