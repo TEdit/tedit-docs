@@ -8,6 +8,7 @@
 * [Getting Started](basics/getting-started.md)
 * [World Components](basics/basics.md)
 * [Tools](basics/toolbar.md)
+* [Paint Modes](basics/paint-modes.md)
 * [Active Tray](basics/active-tray.md)
 * [Menu and Info Bars](basics/menu-and-info-bars.md)
 * [Tips](basics/tips.md)

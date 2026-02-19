@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-description: Tile, wall, wire, liquid, track, and sprite paint modes
+description: Tile, wall, wire, liquid, track, platform, and sprite paint modes
 ---
 
 # Paint Mode
@@ -43,6 +43,17 @@ Place or remove wires. Select which wire color(s) to paint: Red, Blue, Green, Ye
 
 Place or remove liquids: Water, Lava, Honey, Shimmer.
 
+## Platform Mode
+
+Place platform stairs diagonally. When Platform paint mode is active, hold **Ctrl** and paint diagonally to create stair-step platform runs automatically.
+
+| Action | Result |
+|--------|--------|
+| Paint normally | Place individual platforms |
+| `Ctrl` + diagonal drag | Place a diagonal stair run of platforms |
+
+This works with the Pencil and Brush tools. The stair direction follows the drag direction (up-right, down-right, up-left, down-left).
+
 ## Track Mode
 
 ![Track Mode](/img/v5/interface/brush-track-mode-options.png)
@@ -55,6 +66,17 @@ Place minecart tracks and related components:
 | Booster | Speed booster track |
 | Pressure Plate | Track-mounted pressure plate |
 | Hammer | Cycles track junctions |
+
+### Track Sub-modes
+
+Two additional sub-modes automate common track patterns:
+
+| Sub-mode | Description |
+|----------|-------------|
+| **Tunnel** | Automatically carves out a tunnel while placing track — removes tiles above and below to create a clear path for the minecart |
+| **Smooth** | Places track with gentle curves and transitions instead of hard corners, producing smoother-looking rail lines |
+
+Select the sub-mode from the track options in the action bar while Track Mode is active.
 
 ## Sprite Mode
 

@@ -42,6 +42,8 @@ Undo, redo, copy, paste, selection operations, and access to Settings.
 
 Toggle visibility of rendering layers (tiles, walls, wires, liquids, etc.).
 
+**World Border Visualizer** — Enable the **Show World Borders** option in the Layers menu to overlay biome border lines on the map. This draws visible markers at the boundaries between biomes (Corruption, Crimson, Hallow, Jungle, Desert, Snow, etc.), making it easy to see how biomes are distributed and plan edits around them. Toggle it off to return to the normal view.
+
 ### Plugins
 
 ![Plugins Menu](/img/v5/interface/menu-plugins.png)

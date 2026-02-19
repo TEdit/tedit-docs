@@ -50,15 +50,19 @@ Places one tile at a time. Great for fine detail work.
 | Action | Result |
 |--------|--------|
 | Left-click + drag | Freehand draw |
-| Shift + left-click | Straight line between two points |
+| Shift + left-click | Draw straight line segment to clicked point |
 | Right-click + drag | Horizontal line |
 | Left + right-click + drag | Vertical line |
+
+### Polyline Drawing (Shift+Click)
+
+Hold **Shift** and click successive points to draw connected straight line segments — a polyline. Each Shift+click anchors the end of the previous segment and starts the next. This works with the Pencil, Brush, and Morph tools. Release Shift to end the polyline.
 
 ## Brush Tool `[B]`
 
 Paints with a configurable brush size and shape. See [Brush Settings](brush-settings.md).
 
-Same drawing controls as the Pencil tool, but affects an area based on brush size.
+Same drawing controls as the Pencil tool, but affects an area based on brush size. Supports the same Shift+click polyline drawing.
 
 ## Fill Tool `[F]`
 
@@ -94,7 +98,7 @@ Converts tiles and walls to a selected biome type.
 
 ![Morph Options](/img/v5/interface/morph-tool-options.png)
 
-Only affects existing tiles — doesn't fill empty space. Behavior changes with depth (sky, dirt, rock, hell layers).
+Only affects existing tiles — doesn't fill empty space. Behavior changes with depth (sky, dirt, rock, hell layers). Supports Shift+click [polyline drawing](#polyline-drawing-shiftclick).
 
 Options:
 - **Target Biome** — Purify, Corruption, Crimson, Hallow, etc.

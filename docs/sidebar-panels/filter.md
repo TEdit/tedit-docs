@@ -49,3 +49,15 @@ Select which layer types to filter:
 :::tip
 **Filter Clipboard** — When enabled, clipboard paste previews also respect the active filters.
 :::
+
+## Pixelmap
+
+The Pixelmap feature renders the entire world as a color-coded image for analysis. It supports three color modes:
+
+| Color Mode | Description |
+|------------|-------------|
+| **Normal** | Renders tiles using their standard map colors — the same colors you see on the in-game minimap |
+| **Biome** | Colors each tile based on the biome it belongs to (Corruption, Crimson, Hallow, Jungle, Snow, Desert, etc.) — useful for visualizing biome spread and distribution |
+| **Height** | Colors tiles based on their vertical position — a gradient from surface to underground to cavern, making depth and terrain shape easy to read |
+
+Select the mode from the Pixelmap section in the Filter panel, then click **Render** to generate the view. The pixelmap is a snapshot — re-render after making edits to update it.
