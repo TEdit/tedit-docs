@@ -63,6 +63,7 @@ const sidebars = {
       label: 'Advanced',
       items: [
         'advanced/scripting-guide',
+        'advanced/api-reference',
         'advanced/image-schematics',
         'advanced/auto-update',
         'advanced/troubleshooting',
