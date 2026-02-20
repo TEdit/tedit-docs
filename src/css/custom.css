@@ -25,3 +25,59 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* AI Script Assistant buttons */
+.ai-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.ai-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: filter 0.15s, transform 0.1s;
+}
+
+.ai-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+  color: #fff !important;
+}
+
+.ai-btn:active {
+  transform: translateY(0);
+}
+
+.ai-btn p {
+  margin: 0;
+  line-height: 1;
+}
+
+.ai-btn svg {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+
+
+.ai-btn--chatgpt { background: #10a37f; }
+.ai-btn--claude  { background: #d97706; }
+.ai-btn--gemini  { background: #4285f4; }
+
+@media (max-width: 520px) {
+  .ai-buttons { grid-template-columns: 1fr; }
+}

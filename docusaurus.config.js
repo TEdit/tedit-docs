@@ -87,6 +87,12 @@ const config = {
             label: 'Documentation',
           },
           {
+            type: 'doc',
+            docId: 'advanced/scripting-guide',
+            position: 'left',
+            label: 'Scripting',
+          },
+          {
             type: 'docsVersionDropdown',
             position: 'left',
           },
