@@ -46,5 +46,4 @@ Finally, submit a pull request back to the master TEdit repo: [Submit a Pull Req
 
 ## Localization and Languages
 
-Please see this PR for an example of the edits needed to add your own language: [https://github.com/TEdit/Terraria-Map-Editor/pull/1391](https://github.com/TEdit/Terraria-Map-Editor/pull/1391)
-
+Help translate TEdit into your language on [Crowdin](https://crowdin.com/project/tedit/invite?h=9c3543b1a29200f5f240fc426a928b1b2694868).
