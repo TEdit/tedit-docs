@@ -41,6 +41,17 @@ TEdit 5 supports customizable keyboard shortcuts for most actions.
 | `Ctrl+D` | Clear selection |
 | `Ctrl+A` | Select all |
 
+### Floating Paste
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+Q` | Rotate clockwise 90° |
+| `Ctrl+Shift+Q` | Rotate counter-clockwise 90° |
+| `Ctrl+H` | Flip horizontal |
+| `Ctrl+Shift+H` | Flip vertical |
+| `Enter` | Accept paste |
+| `Esc` | Cancel paste |
+
 ### View
 
 | Shortcut | Action |

@@ -17,6 +17,11 @@ const sidebars = {
       label: 'Getting Started',
     },
     {
+      type: 'doc',
+      id: 'whats-new',
+      label: "What's New",
+    },
+    {
       type: 'category',
       label: 'Interface',
       items: [

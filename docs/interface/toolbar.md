@@ -108,6 +108,24 @@ Options:
 - **Target Biome** — Purify, Corruption, Crimson, Hallow, etc.
 - **Base Tiles** / **Evil Tiles** / **Moss** / **Sprites** — Toggle what gets converted
 
+## Paste Tool
+
+Activated by `Ctrl+V` or clicking **Paste** on a [clipboard](../sidebar-panels/clipboard.md) schematic.
+
+![Floating Paste](/img/v5/interface/paste.png)
+
+| Action | Result |
+|--------|--------|
+| Left-click | Place floating paste on the map |
+| Drag inside paste | Reposition |
+| Drag a handle | Resize (nearest-neighbor resampling) |
+| `Ctrl+Q` / `Ctrl+Shift+Q` | Rotate CW / CCW |
+| `Ctrl+H` / `Ctrl+Shift+H` | Flip horizontal / vertical |
+| `Enter` | Accept (commit to world) |
+| `Esc` | Cancel |
+
+The paste toolbar shows editable X, Y, W, and H fields. See [Clipboard — Floating Paste](../sidebar-panels/clipboard.md#floating-paste) for full details.
+
 ## Hammer Tool
 
 Area-based hammer tool. Applies hammer actions across the brush area. Uses the same brush size/shape as the Brush tool.

@@ -88,6 +88,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'whats-new',
+            position: 'left',
+            label: "What's New",
+          },
+          {
+            type: 'doc',
             docId: 'advanced/scripting-guide',
             position: 'left',
             label: 'Scripting',
