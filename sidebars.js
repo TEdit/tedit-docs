@@ -25,6 +25,7 @@ const sidebars = {
         'interface/action-bar',
         'interface/paint-mode',
         'interface/brush-settings',
+        'interface/wire-routing',
         'interface/status-bar',
       ],
     },

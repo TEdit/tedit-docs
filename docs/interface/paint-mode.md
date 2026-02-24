@@ -37,6 +37,8 @@ You can also apply paint colors and coatings (Echo, Illuminant, Full Bright) to 
 
 Place or remove wires. Select which wire color(s) to paint: Red, Blue, Green, Yellow. You can also place actuators in this mode.
 
+Press `Shift+W` to enable [wire routing](wire-routing.md) for CAD-style click-to-click wire drawing with automatic 90° and 45° path routing. Use number keys `1`–`4` to quickly toggle wire colors.
+
 ## Liquid Mode
 
 ![Liquid Mode](/img/v5/interface/brush-liquid-mode-options.png)

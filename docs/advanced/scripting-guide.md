@@ -11,7 +11,7 @@ TEdit 5 includes a built-in scripting engine for automating world edits. Write s
 
 Use an AI chatbot to help you write TEdit scripts. Click one of the links below to open a chat, or copy the prompt and paste it into your preferred assistant.
 
-export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
+export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD-style wire routing)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
 
 <div className="ai-buttons">
   <a className="ai-btn ai-btn--chatgpt" href="https://chatgpt.com/g/g-6998742288b481919bfd63193f833e92-tedit-api-assistant" target="_blank" rel="noopener noreferrer">
@@ -57,6 +57,7 @@ Key API objects:
 - world: read-only world metadata (width, height, title, seed, spawnX, spawnY)
 - metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)
 - log: output (print, warn, error, progress)
+- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD wire routing)
 - finder: add results to the Find sidebar panel
 - tools: UI tool access
 
@@ -264,6 +265,42 @@ batch.forEachInSelection((x, y) => {
   }
 });
 log.print(`Added red wire to ${count} tiles`);
+```
+
+### Route a wire between two points
+
+```javascript
+// Route a single red wire with a 90° elbow
+draw.setWire(true, false, false, false);
+draw.routeWire(100, 200, 150, 220, '90', 'h');
+log.print("Routed red wire");
+```
+
+### Route a bus of parallel wires
+
+```javascript
+// Route 5 parallel green wires with 45° miter routing
+draw.setWire(false, false, true, false);
+const count = draw.routeBus(5, 100, 200, 200, 250, '45', 'auto');
+log.print(`Placed ${count} wire tiles in 5-wire bus`);
+```
+
+### Route tile paths (platforms, tracks)
+
+```javascript
+// Route a stone block path using wire routing geometry
+draw.setTile(metadata.tileId("Stone Block"));
+draw.routeWire(50, 50, 100, 80, '90', 'v');
+log.print("Routed stone path");
+```
+
+### Connect two points with colored wire bus
+
+```javascript
+// Red + blue bus from spawn to dungeon
+draw.setWire(true, true, false, false);
+draw.routeBus(3, world.spawnX, world.spawnY - 5, world.dungeonX, world.dungeonY, '90', 'auto');
+log.print("Connected spawn to dungeon with wire bus");
 ```
 
 ### Copy a column of tiles downward

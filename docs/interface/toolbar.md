@@ -54,6 +54,8 @@ Places one tile at a time. Great for fine detail work.
 | Right-click + drag | Horizontal line |
 | Left + right-click + drag | Vertical line |
 
+In Wire paint mode, press `Shift+W` to enable [single wire routing](wire-routing.md) — click-to-click CAD-style wire drawing with 90° and 45° routing.
+
 ### Polyline Drawing (Shift+Click)
 
 Hold **Shift** and click successive points to draw connected straight line segments — a polyline. Each Shift+click anchors the end of the previous segment and starts the next. This works with the Pencil, Brush, and Morph tools. Release Shift to end the polyline.
@@ -63,6 +65,8 @@ Hold **Shift** and click successive points to draw connected straight line segme
 Paints with a configurable brush size and shape. See [Brush Settings](brush-settings.md).
 
 Same drawing controls as the Pencil tool, but affects an area based on brush size. Supports the same Shift+click polyline drawing.
+
+In Wire paint mode, press `Shift+W` to enable [bus wire routing](wire-routing.md#bus-routing-brush-tool) — draws multiple parallel wires filling the brush area with proper spacing.
 
 ## Fill Tool `[F]`
 

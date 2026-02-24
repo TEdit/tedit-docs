@@ -126,6 +126,44 @@ Placing a sprite automatically creates associated entities (Chest, Sign, TileEnt
 | `fill(x, y)` | Flood fill from point (respects selection) |
 | `hammer(x1, y1, x2, y2)` | Auto-slope tiles along brush-width line |
 
+### Wire Routing
+
+Route wires (or tiles) along CAD-style paths. Uses the current picker configuration set by `setWire()` or `setTile()`.
+
+| Method | Description |
+|--------|-------------|
+| `routeWire(x1, y1, x2, y2, mode?, direction?) → int` | Route a single wire path; returns tiles placed |
+| `routeBus(wireCount, x1, y1, x2, y2, mode?, direction?) → int` | Route parallel wires; returns tiles placed |
+| `routeWirePath(x1, y1, x2, y2, mode?, direction?) → [{x, y}]` | Get single wire path coordinates (no placement) |
+| `routeBusPath(wireCount, x1, y1, x2, y2, mode?, direction?) → [{x, y}]` | Get bus path coordinates (no placement) |
+
+**Parameters:**
+- **mode** — `'90'` (default) for 90° elbow, `'45'` for 45° miter
+- **direction** — `'auto'` (default), `'h'` for horizontal-first, `'v'` for vertical-first
+- **wireCount** — Number of parallel wires (auto-converts to brush size: spacing × (count − 1) + 1)
+
+**Spacing:** 90° mode uses 2-tile spacing (1-tile gap), 45° mode uses 3-tile spacing (2-tile gap).
+
+```javascript
+// Route red wire with 90° elbow
+draw.setWire(true, false, false, false);
+draw.routeWire(100, 200, 150, 220, '90', 'h');
+
+// Route 4 parallel blue wires with 45° miter
+draw.setWire(false, true, false, false);
+draw.routeBus(4, 100, 200, 150, 220, '45', 'auto');
+
+// Route tiles instead of wires
+draw.setTile(1); // Stone
+draw.routeWire(50, 50, 80, 70);
+
+// Get path coordinates for custom processing
+var path = draw.routeWirePath(10, 10, 30, 20, '90', 'v');
+for (var i = 0; i < path.length; i++) {
+    log.print(path[i].x + "," + path[i].y);
+}
+```
+
 ## `chests` — Chest Inventory
 
 | Property/Method | Description |
