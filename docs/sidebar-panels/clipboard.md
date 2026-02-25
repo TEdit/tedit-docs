@@ -33,9 +33,17 @@ The clipboard stores copied map sections as schematics. Use it to duplicate buil
 `Ctrl+V` pastes the most recent schematic. Click **Paste** on a specific schematic to switch which one `Ctrl+V` uses.
 :::
 
+## Instant Paste
+
+![Instant Paste](/img/v5/interface/instant-paste.png)
+
+When **Instant Paste** is enabled (toggle in the paste toolbar), pasting commits immediately on click without creating a floating preview. This is useful for rapid stamping of schematics — click repeatedly to place copies without needing to accept each one.
+
+Instant paste skips the floating layer entirely: each click places the schematic directly into the world at the cursor position.
+
 ## Floating Paste
 
-When you click to place a paste, a floating preview appears with a dashed border and drag handles. The paste is **not committed** until you accept it — you can reposition, resize, and transform it first.
+When you click to place a paste (with Instant Paste disabled), a floating preview appears with a dashed border and drag handles. The paste is **not committed** until you accept it — you can reposition, resize, and transform it first.
 
 ![Floating Paste](/img/v5/interface/paste.png)
 

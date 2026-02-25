@@ -12,6 +12,7 @@ The sidebar panels are on the right side of the editor. Click the panel tabs to 
 | Panel | Purpose |
 |-------|---------|
 | [World Properties](world-properties.md) | World name, time, bosses, events, NPCs |
+| [Palette](palette.md) | Tile/wall picker and mask settings |
 | [Special Tiles](special-tiles.md) | Edit chests, signs, tile entities |
 | [Sprites](sprites.md) | Browse and place sprites/furniture |
 | [Clipboard](clipboard.md) | Copy, paste, import/export schematics |

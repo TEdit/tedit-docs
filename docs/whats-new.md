@@ -41,6 +41,12 @@ The **Brush tool** adds **bus routing** — draw multiple parallel wires filling
 
 ![Bus Routing](/img/v5/interface/bus-routing.png)
 
+**Chain mode** links segments together — each committed endpoint becomes the anchor for the next segment, creating continuous polyline wire runs.
+
+![Chain Wire](/img/v5/interface/chain-wire.png)
+
+Wire routing also supports **Track** and **Platform** paint modes. Track routing uses thin diagonals matching Terraria's native track behavior, with optional tunnel clearing preview. Platform routing automatically applies proper stair frames (treads, stringers, landings) on 45° miter paths.
+
 [Wire Routing Guide](interface/wire-routing.md)
 
 ---
@@ -53,7 +59,25 @@ Paste operations now create a **floating preview layer** before committing. Move
 
 Editable X, Y, W, and H fields in the paste toolbar give you pixel-perfect control. Resizing uses nearest-neighbor tile resampling so your builds scale cleanly.
 
-[Clipboard & Floating Paste](sidebar-panels/clipboard.md#floating-paste)
+**Instant Paste** mode commits immediately on click — no floating preview, no accept step. Toggle it on for rapid stamping of schematics.
+
+![Instant Paste](/img/v5/interface/instant-paste.png)
+
+[Clipboard & Floating Paste](sidebar-panels/clipboard.md#floating-paste) | [Instant Paste](sidebar-panels/clipboard.md#instant-paste)
+
+---
+
+## Palette Panel
+
+The new **Palette** sidebar panel gives you a full browsable view of all tiles and walls with search filtering, plus dedicated mask controls for tiles and walls independently.
+
+![Palette — Tile Picker](/img/v5/interface/palette-tile.png)
+
+Tile and wall masks restrict where paint operations take effect — paint only in empty space, or only overwrite matching types. The Palette panel makes it easy to configure both without leaving the editing workflow.
+
+![Palette — Masks](/img/v5/interface/palette-mask.png)
+
+[Palette Panel](sidebar-panels/palette.md) | [Masks](interface/paint-mode.md#masks)
 
 ---
 

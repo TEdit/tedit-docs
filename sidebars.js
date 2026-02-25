@@ -40,6 +40,7 @@ const sidebars = {
       items: [
         'sidebar-panels/overview',
         'sidebar-panels/world-properties',
+        'sidebar-panels/palette',
         'sidebar-panels/special-tiles',
         'sidebar-panels/sprites',
         'sidebar-panels/clipboard',

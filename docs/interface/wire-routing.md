@@ -5,9 +5,9 @@ description: CAD-style wire routing for precise wiring with the Pencil and Brush
 
 # Wire Routing
 
-Wire routing mode provides CAD-style click-to-click wire drawing. Instead of freehand painting, you click an anchor point and then click a destination — the editor calculates a clean routed path between the two points.
+Wire routing mode provides CAD-style click-to-click drawing. Instead of freehand painting, you click an anchor point and then click a destination — the editor calculates a clean routed path between the two points.
 
-Wire routing works with both the **Pencil Tool** (single wire) and the **Brush Tool** (multi-wire bus).
+Wire routing works with the **Pencil Tool** (single wire) and the **Brush Tool** (multi-wire bus). It also supports **Track** and **Platform** paint modes — tracks use thin diagonal routing, and platforms automatically apply proper stair frames (treads, stringers, landings) on 45° miter paths.
 
 ## Entering Wire Mode
 
@@ -17,7 +17,7 @@ Wire routing works with both the **Pencil Tool** (single wire) and the **Brush T
 | `Shift+Q` | Cycle direction override: Auto → Horizontal-first → Vertical-first → Auto |
 | `Escape` | Cancel current anchor (stays in wire mode) or exit wire mode entirely |
 
-Wire mode works when **Wire** paint mode is selected. The status bar shows the current routing mode and direction.
+Wire routing works when **Wire**, **Track**, or **Platform** paint mode is selected. The route panel in the action bar shows the current routing mode and direction. The status bar displays the active mode.
 
 ## Wire Color Shortcuts
 
@@ -44,6 +44,14 @@ Select the **Pencil Tool** `[E]` and enter wire mode with `Shift+W`.
 4. **Right-click** — Cancels the current anchor without committing
 
 The anchor chains automatically: after committing a segment, the endpoint becomes the new anchor for the next segment. This lets you draw polyline wire runs with precise corners.
+
+### Chain Mode
+
+![Chain Wire](/img/v5/interface/chain-wire.png)
+
+When chain mode is enabled (toggle with `Shift+W`), each committed segment's endpoint becomes the anchor for the next segment — creating a continuous polyline of routed wire. Disable chain mode to commit single segments that don't auto-anchor.
+
+Chain mode works with both single wire (Pencil) and bus (Brush) routing.
 
 ### Routing Modes
 
@@ -78,12 +86,7 @@ Bus routing draws **multiple parallel wires** that fill the brush area. The numb
 
 ### Wire Spacing
 
-| Routing Mode | Wire Spacing | Gap Between Wires |
-|-------------|-------------|-------------------|
-| 90° Elbow | 2 tiles | 1 tile gap |
-| 45° Miter | 3 tiles | 2 tile gap |
-
-The wider spacing in miter mode prevents the staircase patterns from touching on the sides.
+Both 90° elbow and 45° miter bus routing use **2-tile spacing** (1-tile gap between wires). Diagonal-touching wires don't connect in Terraria, so miter staircase patterns don't need extra spacing.
 
 ### Bus Layout
 
@@ -96,6 +99,29 @@ The wider spacing in miter mode prevents the staircase patterns from touching on
 :::tip
 Use the direction override (`Shift+Q`) to control whether bus wires run horizontally or vertically first. This determines which edge of the brush the wires start from and which edge they arrive at.
 :::
+
+## Track & Platform Routing
+
+Wire routing extends to **Track** and **Platform** paint modes. The route panel in the action bar is visible for all three modes.
+
+### Track Routing
+
+Track mode uses thin diagonal routing for 45° miter paths — each diagonal step occupies a single tile instead of the 2-tile staircase pattern used by wires. When **Tunnel** sub-mode is active, the preview shows the tunnel clearing area in a darker overlay above the track path.
+
+### Platform Routing
+
+Platform mode uses staircase routing for 45° miter paths and automatically assigns the correct tile frames:
+
+| Tile Role | Description |
+|-----------|-------------|
+| **Inset** | Tread (top surface of each stair step) — 3 random variants |
+| **Stringer** | Riser (underside of each stair step) |
+| **Top Landing** | Transition tile at the upper end of the staircase |
+| **Bottom Landing** | Transition tile at the lower end of the staircase |
+| **Endcap** | Landing variant used when a solid block is adjacent |
+| **Single** | Used for pure vertical platform runs |
+
+Landings are placed one tile into the horizontal run from the staircase, and stair direction (up-right vs up-left) is detected automatically from the path vector.
 
 ## Scripting API
 

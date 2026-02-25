@@ -15,7 +15,15 @@ The default mode. Select a tile type and/or wall type from the dropdowns. The ID
 
 **Eraser toggle** — When enabled (highlighted), painting removes tiles/walls instead of placing them.
 
+### Tile Palette
+
+![Palette — Tile Picker](/img/v5/interface/palette-tile.png)
+
+The tile and wall selectors in the action bar let you pick the active tile and wall types. The [Palette sidebar panel](../sidebar-panels/palette.md) provides a larger browsable view of all tiles and walls with search and filtering.
+
 ### Masks
+
+![Palette — Masks](/img/v5/interface/palette-mask.png)
 
 Masks control *where* painting takes effect:
 
@@ -25,7 +33,7 @@ Masks control *where* painting takes effect:
 | Edit Empty | Only paint over empty space |
 | Edit Matching | Only paint over tiles/walls matching the mask type |
 
-Set the mask type in the Mask dropdown — it has the same tile/wall options as the main selector.
+Set the mask type in the Mask dropdown — it has the same tile/wall options as the main selector. Tile masks and wall masks can be configured independently in the [Palette sidebar panel](../sidebar-panels/palette.md).
 
 ### Coatings
 
@@ -47,14 +55,16 @@ Place or remove liquids: Water, Lava, Honey, Shimmer.
 
 ## Platform Mode
 
-Place platform stairs diagonally. When Platform paint mode is active, hold **Ctrl** and paint diagonally to create stair-step platform runs automatically.
+Place platforms with optional stair routing. Platform mode supports [wire routing](wire-routing.md) (`Shift+W`) for CAD-style routed placement.
 
 | Action | Result |
 |--------|--------|
 | Paint normally | Place individual platforms |
-| `Ctrl` + diagonal drag | Place a diagonal stair run of platforms |
+| `Shift+W` | Enable wire routing for click-to-click platform placement |
 
-This works with the Pencil and Brush tools. The stair direction follows the drag direction (up-right, down-right, up-left, down-left).
+With 45° miter routing, platforms are placed with proper stair frames — treads (insets), risers (stringers), and landings at transitions between flat runs and staircase sections. The stair direction and frame variants are applied automatically. Platform style is selected from the action bar.
+
+See [Wire Routing — Platform Routing](wire-routing.md#platform-routing) for details on stair frame assignment.
 
 ## Track Mode
 
@@ -79,6 +89,8 @@ Two additional sub-modes automate common track patterns:
 | **Smooth** | Places track with gentle curves and transitions instead of hard corners, producing smoother-looking rail lines |
 
 Select the sub-mode from the track options in the action bar while Track Mode is active.
+
+Track mode also supports [wire routing](wire-routing.md) (`Shift+W`) for CAD-style routed track placement. The 45° miter routing uses thin diagonal paths (one tile per diagonal step) matching Terraria's native track diagonal behavior. When **Tunnel** sub-mode is active, the tunnel clearing area is previewed in a darker overlay above the track path.
 
 ## Sprite Mode
 
