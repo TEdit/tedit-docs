@@ -173,6 +173,8 @@ for (var i = 0; i < path.length; i++) {
 | `getAt(x, y) → {x, y, name, items}` | Chest at position (or null) |
 | `findByItem(id) → [...]` | Find chests containing item by NetId |
 | `findByItemName(name) → [...]` | Find chests containing item by name (case-insensitive substring match) |
+| `setName(x, y, name)` | Set chest name/label |
+| `findByName(name) → [...]` | Find chests by name (case-insensitive substring match) |
 | `setItem(x, y, slot, id, stack, prefix)` | Set slot contents |
 | `clearItem(x, y, slot)` | Clear slot |
 | `addItem(x, y, id, stack, prefix) → bool` | Add to first empty slot; returns false if full |

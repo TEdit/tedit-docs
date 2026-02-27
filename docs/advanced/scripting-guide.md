@@ -498,6 +498,27 @@ chests.setItem(500, 300, 0, zenithId, 1, 81); // prefix 81 = Legendary
 log.print("Placed Legendary Zenith in chest");
 ```
 
+### Find chests by name
+
+```javascript
+// Find all chests named "Loot" (case-insensitive substring match)
+const results = chests.findByName("Loot");
+finder.clear();
+for (const c of results) {
+  log.print(`"${c.name}" at (${c.x}, ${c.y})`);
+  finder.addResult(c.name, c.x, c.y, "chest");
+}
+log.print(`Found ${results.length} chests matching "Loot"`);
+```
+
+### Rename a chest
+
+```javascript
+// Set the name/label of the chest at (500, 300)
+chests.setName(500, 300, "My Storage");
+log.print("Chest renamed");
+```
+
 ### List all signs and their text
 
 ```javascript
@@ -987,6 +1008,8 @@ log.print(`Removed ${count} wire segments`);
 | `getAt(x, y) → {...}` | Chest at position |
 | `findByItem(id) → [...]` | Find by item ID |
 | `findByItemName(name) → [...]` | Find by item name |
+| `setName(x, y, name)` | Set chest name/label |
+| `findByName(name) → [...]` | Find chests by name (case-insensitive substring match) |
 | `setItem(x, y, slot, id, stack, prefix)` | Set slot contents |
 | `clearItem(x, y, slot)` | Clear slot |
 | `addItem(x, y, id, stack, prefix) → bool` | Add to first empty slot |
