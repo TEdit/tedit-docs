@@ -27,16 +27,17 @@ dotnet build
 
 ## Running
 
-Open `TEdit.sln` in Visual Studio or Rider and run the `TEdit` project.
+Open `TEdit.slnx` in Visual Studio or Rider and run the `TEdit` project.
 
 ## Project Structure
 
-| Project | Description |
-|---------|-------------|
-| `TEdit` | Main WPF application |
-| `TEdit.Editor` | Editor logic, tools, brush/paint modes |
-| `TEdit.Terraria` | Terraria world file I/O and data models |
-| `TEdit.Configuration` | Settings and configuration |
+| Project | Target | Description |
+|---------|--------|-------------|
+| `TEdit` | net10.0-windows (WPF) | Main desktop application |
+| `TEdit5` | net10.0 (Avalonia) | Cross-platform application |
+| `TEdit.Editor` | net10.0 | Editor logic, tools, brush/paint modes |
+| `TEdit.Terraria` | net10.0 | Terraria world file I/O and data models |
+| `TEdit.Common` | netstandard2.0 | Shared types, geometry, JSON serialization |
 
 ## Contributing
 

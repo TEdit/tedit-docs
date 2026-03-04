@@ -39,6 +39,10 @@ Set the mask type in the Mask dropdown — it has the same tile/wall options as 
 
 You can also apply paint colors and coatings (Echo, Illuminant, Full Bright) to tiles and walls.
 
+### Negative Paint
+
+Terraria's **Negative Paint** (paint ID 30) inverts the colors of tiles and walls. TEdit renders this with a dedicated GPU shader that inverts RGB values while preserving transparency — so negative-painted tiles appear correctly in the editor, matching in-game appearance.
+
 ## Wire Mode
 
 ![Wire Mode](/img/v5/interface/brush-wire-mode-options.png)
@@ -96,4 +100,16 @@ Track mode also supports [wire routing](wire-routing.md) (`Shift+W`) for CAD-sty
 
 ![Sprite Mode](/img/v5/interface/brush-sprite-mode-options.png)
 
-Used with the Sprite tool. Select sprites from the [Sprites sidebar panel](../sidebar-panels/sprites.md).
+Used with the Sprite tool for placing sprites. Select sprites from the [Sprites sidebar panel](../sidebar-panels/sprites.md).
+
+### Painting Existing Sprites
+
+The Pencil and Brush tools can apply properties to existing sprites without erasing them. With the eraser toggle **off** in Sprite mode, painting over an existing sprite applies:
+
+- **Tile paint color** — Color the sprite's tile
+- **Wall paint color** — Color the wall behind the sprite
+- **Coatings** — Echo and Illuminant coatings for tiles and walls
+- **Actuator** — Toggle the actuator flag
+- **Inactive** — Toggle the actuated (inactive) state
+
+This lets you quickly paint or coat large numbers of placed sprites using the brush, without having to re-place them.

@@ -8,7 +8,7 @@ description: Complete scripting API reference for all TEdit objects
 Complete reference for the TEdit scripting API.
 Available in both JavaScript and Lua engines.
 
-All API objects are accessed as globals: `tile`, `batch`, `geometry`, `selection`, `sprites`, `draw`, `chests`, `signs`, `npcs`, `tileEntities`, `world`, `metadata`, `log`, `finder`, `tools`.
+All API objects are accessed as globals: `tile`, `batch`, `geometry`, `selection`, `sprites`, `draw`, `generate`, `chests`, `signs`, `npcs`, `tileEntities`, `world`, `metadata`, `log`, `finder`, `tools`.
 
 ---
 
@@ -162,6 +162,65 @@ var path = draw.routeWirePath(10, 10, 30, 20, '90', 'v');
 for (var i = 0; i < path.length; i++) {
     log.print(path[i].x + "," + path[i].y);
 }
+```
+
+## `generate` — Procedural Generation
+
+### Trees & Forests
+
+| Method | Description |
+|--------|-------------|
+| `listTreeTypes() → [{name, tileId}]` | List all supported tree type names and tile IDs |
+| `tree(type, x, y) → bool` | Place a single tree at ground position (x, y); type is a name string |
+| `forest(types[], x, y, w, h, density?) → int` | Place random trees in rectangle; density 0.0–1.0 (default 0.15) |
+| `forestInSelection(types[], density?) → int` | Place random trees in current selection |
+| `findSurface(x, yStart, yEnd) → int` | Scan downward for first solid tile; returns y or -1 |
+
+**Tree types:** `oak` (5), `palm` (323), `mushroom` (72), `topaz` (583), `amethyst` (584), `sapphire` (585), `emerald` (586), `ruby` (587), `diamond` (588), `amber` (589), `sakura` (596), `willow` (616), `ash` (634)
+
+:::note
+Trees grow upward from the given y coordinate (ground level). The `forest` and `forestInSelection` methods use `findSurface` internally to locate the ground in each column.
+:::
+
+### WorldGen Structures
+
+Ported from Terraria's `WorldGen` methods — the core primitives for procedural terrain generation.
+
+| Method | Description |
+|--------|-------------|
+| `tileRunner(x, y, strength, steps, tileType, speedX?, speedY?)` | Wandering painter: fills diamond-shaped blobs with `tileType`. Port of `WorldGen.TileRunner`. |
+| `tunnel(x, y, strength, steps, speedX?, speedY?)` | Carve natural cave tunnels (clears tiles along a wandering path) |
+| `lake(x, y, liquidType?, strength?)` | Create irregular liquid pool. `liquidType`: `"water"` (default), `"lava"`, `"honey"`, `"shimmer"`. `strength` scales pool size (default 1.0). |
+| `oreVein(oreName, x, y, size?)` | Place named ore vein with presets. `size`: `"small"` (0.5x), `"medium"` (1x, default), `"large"` (2x). |
+| `listOreTypes() → [{name, tileId}]` | List available ore names and tile IDs |
+
+**Ore types:** `copper` (7), `tin` (166), `iron` (6), `lead` (167), `silver` (9), `tungsten` (168), `gold` (8), `platinum` (169), `meteorite` (37), `hellstone` (58), `cobalt` (107), `palladium` (221), `mythril` (108), `orichalcum` (222), `adamantite` (111), `titanium` (223), `chlorophyte` (211), `luminite` (408)
+
+:::tip TileRunner parameters
+- **strength** controls blob radius (~3–15 for ore, ~10–40 for large patches)
+- **steps** controls how far the painter wanders (~5–20 for ore, ~20–60 for veins)
+- **speedX/speedY** add directional bias (default 0 = random wander)
+- The painter fills a diamond (Manhattan distance) that tapers from full `strength` to 0 over `steps` iterations
+- Frame-important tiles (furniture, plants) are skipped automatically
+:::
+
+```javascript
+// Scatter gold ore around a point
+generate.oreVein("gold", 500, 400);
+generate.oreVein("gold", 500, 400, "large");
+
+// Carve a horizontal tunnel
+generate.tunnel(100, 300, 8, 30, 1.0, 0.0);
+
+// Create a water pool
+generate.lake(500, 500, "water", 1.5);
+
+// Place a custom tile patch using tileRunner
+var dirt = metadata.tileId("Dirt Block");
+generate.tileRunner(300, 300, 10, 20, dirt);
+
+// List all ore types
+log.print(JSON.stringify(generate.listOreTypes()));
 ```
 
 ## `chests` — Chest Inventory
@@ -616,9 +675,9 @@ Mannequins have equipment slots, dye slots, a weapon slot (Misc[0]), and a pose.
 
 | Method | Description |
 |--------|-------------|
-| `tileId(name) → int` | Tile ID by name, -1 if not found (case-insensitive) |
-| `wallId(name) → int` | Wall ID by name, -1 if not found (case-insensitive) |
-| `itemId(name) → int` | Item ID by name, -1 if not found (case-insensitive) |
+| `tileId(name) → int` | Tile ID by name, 0 if not found (case-insensitive) |
+| `wallId(name) → int` | Wall ID by name, 0 if not found (case-insensitive) |
+| `itemId(name) → int` | Item ID by name, 0 if not found (case-insensitive) |
 | `tileName(id) → string` | Tile name by ID, empty string if not found |
 | `wallName(id) → string` | Wall name by ID, empty string if not found |
 | `itemName(id) → string` | Item name by ID, empty string if not found |

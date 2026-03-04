@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-description: Hide or grayscale tile layers for clearer editing
+description: Hide or darken tile layers for clearer editing
 ---
 
 # Filter
@@ -13,8 +13,19 @@ The Filter panel lets you hide or dim specific tile types so you can focus on wh
 
 | Mode | Effect |
 |------|--------|
-| **Hide** | Selected types become invisible |
-| **Grayscale** | Selected types render in gray, making unfiltered tiles stand out |
+| **Hide** | Filtered types become completely invisible |
+| **Darken** | Filtered types are darkened and desaturated, making unfiltered tiles stand out |
+
+Toggle between modes with the **Hide** switch at the top of the panel. When Hide is off, the Darken mode is active.
+
+### Darken & Desaturate Sliders
+
+In Darken mode, two sliders control the visual intensity applied to filtered tiles:
+
+- **Darken** (0–100, default 75) — How much to dim filtered tiles. Higher values make them darker.
+- **Desaturate** (0–100, default 75) — How much to remove color from filtered tiles. Higher values make them more gray.
+
+These sliders use a GPU shader for real-time preview as you adjust them.
 
 ## Background Modes
 
@@ -22,9 +33,9 @@ Control the map background appearance while filtering:
 
 | Mode | Effect |
 |------|--------|
-| Normal | Standard background |
-| Transparent | See-through background |
-| Custom | Pick a custom background color |
+| **Normal** | Standard background |
+| **Transparent** | See-through background |
+| **Custom** | Pick a custom background color using the color picker |
 
 ## Filter Tabs
 
@@ -38,11 +49,12 @@ Select which layer types to filter:
 
 ## Usage
 
-1. Choose a **Filter Mode** (Hide or Grayscale)
-2. Select a **Background Mode**
-3. Check the items you want to filter in the tabs
-4. Click **Apply**
-5. Click **Disable** to restore normal view
+1. Toggle the **Hide** switch to choose Hide or Darken mode
+2. If using Darken mode, adjust the **Darken** and **Desaturate** sliders
+3. Select a **Background Mode**
+4. Check the items you want to filter in the tabs
+5. Click **Apply**
+6. Click **Disable** to restore normal view
 
 ![Filter Preview](/img/v5/sidebar-panels/sidebar-filter-preview.png)
 

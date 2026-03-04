@@ -11,7 +11,7 @@ TEdit 5 includes a built-in scripting engine for automating world edits. Write s
 
 Use an AI chatbot to help you write TEdit scripts. Click one of the links below to open a chat, or copy the prompt and paste it into your preferred assistant.
 
-export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD-style wire routing)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
+export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD-style wire routing)\n- generate: procedural generation — trees (tree, forest, forestInSelection), worldgen structures (tileRunner, tunnel, lake, oreVein, listOreTypes, findSurface)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
 
 <div className="ai-buttons">
   <a className="ai-btn ai-btn--chatgpt" href="https://chatgpt.com/g/g-6998742288b481919bfd63193f833e92-tedit-api-assistant" target="_blank" rel="noopener noreferrer">
@@ -58,6 +58,7 @@ Key API objects:
 - metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)
 - log: output (print, warn, error, progress)
 - draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD wire routing)
+- generate: procedural generation — trees (tree, forest, forestInSelection), worldgen structures (tileRunner, tunnel, lake, oreVein, listOreTypes, findSurface)
 - finder: add results to the Find sidebar panel
 - tools: UI tool access
 
@@ -865,6 +866,46 @@ log.print(`\nHotel complete! ${npcCount} rooms built, ${assigned} NPCs assigned.
 
 </details>
 
+### Place a single tree
+
+```javascript
+// Place an oak tree at position (500, 300)
+var placed = generate.tree("oak", 500, 300);
+log.print("Tree placed: " + placed);
+```
+
+### Generate a mixed forest in selection
+
+```javascript
+if (!selection.isActive) { log.error("Select an area first!"); }
+
+var count = generate.forestInSelection(["oak", "sakura", "diamond"], 0.15);
+log.print("Placed " + count + " trees");
+```
+
+### List available tree types
+
+```javascript
+var types = generate.listTreeTypes();
+for (var i = 0; i < types.length; i++) {
+  log.print(types[i].name + " (tile " + types[i].tileId + ")");
+}
+```
+
+### Find the surface at a column
+
+```javascript
+var surface = generate.findSurface(500, 0, world.height - 1);
+if (surface >= 0) {
+  log.print("Surface at y=" + surface);
+  finder.clear();
+  finder.addResult("Surface", 500, surface, "tile");
+  finder.navigateFirst();
+} else {
+  log.print("No surface found");
+}
+```
+
 ### Checkerboard pattern in selection
 
 ```javascript
@@ -1155,4 +1196,16 @@ See the [full API reference](api-reference.md#tileentities--tile-entity-manageme
 | `brush(x1, y1, x2, y2)` | Draw brush-width line |
 | `fill(x, y)` | Flood fill from point |
 | `hammer(x1, y1, x2, y2)` | Auto-slope tiles along line |
+
+### `generate` — Procedural Tree & Forest Generation
+
+| Method | Description |
+|--------|-------------|
+| `listTreeTypes() → [{name, tileId}]` | List supported tree types |
+| `tree(type, x, y) → bool` | Place a single tree at ground position |
+| `forest(types[], x, y, w, h, density?) → int` | Place random trees in rectangle (density 0.0–1.0, default 0.15) |
+| `forestInSelection(types[], density?) → int` | Place random trees in current selection |
+| `findSurface(x, yStart, yEnd) → int` | Scan downward for first solid tile; returns y or -1 |
+
+**Tree types:** `oak`, `palm`, `mushroom`, `topaz`, `amethyst`, `sapphire`, `emerald`, `ruby`, `diamond`, `amber`, `sakura`, `willow`, `ash`
 

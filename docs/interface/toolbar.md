@@ -32,6 +32,19 @@ Draw a rectangle selection on the map.
 
 While a selection is active, painting is restricted to inside the selection.
 
+### Export Selection as PNG
+
+When a selection is active, you can export it as a PNG image via **Edit → Export Selection** or the selection toolbar that appears above the canvas. Four export scales are available:
+
+| Scale | Pixels per tile | Description |
+|-------|-----------------|-------------|
+| **Pixel Map (1×)** | 1×1 | Quick overview using minimap tile colors (CPU-only) |
+| **Quarter Texture (4×)** | 4×4 | Compact rendered preview |
+| **Half Texture (8×)** | 8×8 | Balanced quality and file size |
+| **Full Texture (16×)** | 16×16 | Full game-resolution render with walls, tiles, liquids, and wires |
+
+The textured modes (4×, 8×, 16×) render with the same visual fidelity as the editor canvas, including negative paint effects and tile textures. Large exports are rendered in strips to stay within GPU memory limits.
+
 ## Picker Tool `[R]`
 
 Also known as the eyedropper. Picks tile/wall/liquid properties from the map.
@@ -53,6 +66,7 @@ Places one tile at a time. Great for fine detail work.
 | Shift + left-click | Draw straight line segment to clicked point |
 | Right-click + drag | Horizontal line |
 | Left + right-click + drag | Vertical line |
+| Alt + left-click | [Wire trace highlight](#wire-trace-highlight) (in Wire mode) |
 
 In Wire paint mode, press `Shift+W` to enable [single wire routing](wire-routing.md) — click-to-click CAD-style wire drawing with 90° and 45° routing.
 
@@ -64,7 +78,7 @@ Hold **Shift** and click successive points to draw connected straight line segme
 
 Paints with a configurable brush size and shape. See [Brush Settings](brush-settings.md).
 
-Same drawing controls as the Pencil tool, but affects an area based on brush size. Supports the same Shift+click polyline drawing.
+Same drawing controls as the Pencil tool, but affects an area based on brush size. Supports the same Shift+click polyline drawing. Also supports Alt+click [wire trace highlight](#wire-trace-highlight).
 
 In Wire paint mode, press `Shift+W` to enable [bus wire routing](wire-routing.md#bus-routing-brush-tool) — draws multiple parallel wires filling the brush area with proper spacing.
 
@@ -125,6 +139,16 @@ Activated by `Ctrl+V` or clicking **Paste** on a [clipboard](../sidebar-panels/c
 | `Esc` | Cancel |
 
 The paste toolbar shows editable X, Y, W, and H fields. See [Clipboard — Floating Paste](../sidebar-panels/clipboard.md#floating-paste) for full details.
+
+## Wire Trace Highlight
+
+**Alt + left-click** on a tile with wires to highlight the entire connected wire circuit. TEdit traces from the clicked tile using a direction-aware BFS (breadth-first search) that respects junction box routing — so wires on different sides of a junction are traced independently.
+
+The traced wire is highlighted with a colored overlay matching the wire color (red, blue, green, or yellow). If you have a wire color selected in the [Wire Mode](paint-mode.md#wire-mode) picker, TEdit traces that color; otherwise it traces the first wire found on the clicked tile.
+
+The highlight clears when you switch tools or Alt+click on an empty tile.
+
+Wire trace works with the Arrow, Pencil, and Brush tools.
 
 ## Hammer Tool
 
