@@ -10,6 +10,10 @@ Available in both JavaScript and Lua engines.
 
 All API objects are accessed as globals: `tile`, `batch`, `geometry`, `selection`, `sprites`, `draw`, `generate`, `chests`, `signs`, `npcs`, `tileEntities`, `world`, `metadata`, `log`, `finder`, `tools`.
 
+:::tip TypeScript Autocomplete
+Download [`tedit-api.d.ts`](/tedit-api.d.ts) and place it next to your scripts for full VS Code autocomplete. See the [Scripting Guide](scripting-guide.md#typescript-autocomplete) for setup instructions.
+:::
+
 ---
 
 ## `tile` — Low-level tile read/write
@@ -703,7 +707,7 @@ Mannequins have equipment slots, dye slots, a weapon slot (Misc[0]), and a pose.
 | `navigate(index)` | Navigate to result by index |
 | `navigateFirst()` | Navigate to first result |
 
-## `tools` — UI Tools
+## `tools` — UI Tools & File Operations
 
 | Method | Description |
 |--------|-------------|
@@ -711,7 +715,38 @@ Mannequins have equipment slots, dye slots, a weapon slot (Misc[0]), and a pose.
 | `copySelection()` | Copy selection to clipboard |
 | `getTilePickerTile() → int` | Current tile picker tile value |
 | `getTilePickerWall() → int` | Current wall picker value |
+| `getFilePath() → string` | Get the current world file path |
+| `setFilePath(path)` | Set the current world file path (does not save) |
+| `getWorldsFolder() → string` | Get the default Terraria worlds folder path |
+| `getCloudWorldsFolders() → [{userId, path}]` | Get all Steam Cloud world folder paths |
+| `save() → bool` | Save world to current file path (no UI dialog) |
+| `saveAs(filename, version?) → bool` | Save world to file (no UI dialog, optional version override) |
+| `load(filename) → bool` | Load a world file, replacing the current world (blocks until complete) |
+
+:::tip Short filenames
+`saveAs` and `load` accept just a filename (e.g. `"MyWorld.wld"` or even `"MyWorld"`) — if there are no path separators, the file resolves to the default Terraria worlds folder. The `.wld` extension is added automatically if missing.
+:::
 
 :::note
 The `tools` API is only available when running scripts in the TEdit UI. It is not available in test/headless mode.
 :::
+
+```javascript
+// Save the current world
+tools.save();
+
+// Save to the default worlds folder — just use the filename
+tools.saveAs("MyWorld-Copy");
+
+// Full paths still work
+tools.saveAs("C:/Users/me/Documents/My Games/Terraria/Worlds/MyWorld-Copy.wld");
+
+// Load from the default worlds folder
+tools.load("OtherWorld");
+
+// List cloud world folders
+var clouds = tools.getCloudWorldsFolders();
+for (var i = 0; i < clouds.length; i++) {
+    log.print("Steam user " + clouds[i].userId + ": " + clouds[i].path);
+}
+```

@@ -11,7 +11,7 @@ TEdit 5 includes a built-in scripting engine for automating world edits. Write s
 
 Use an AI chatbot to help you write TEdit scripts. Click one of the links below to open a chat, or copy the prompt and paste it into your preferred assistant.
 
-export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD-style wire routing)\n- generate: procedural generation — trees (tree, forest, forestInSelection), worldgen structures (tileRunner, tunnel, lake, oreVein, listOreTypes, findSurface)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
+export const aiPrompt = `You are a TEdit 5 scripting assistant. TEdit is a Terraria world editor with a built-in JavaScript (Jint) scripting engine.\n\nAPI documentation: https://docs.tedit.dev/advanced/scripting-guide\nTile/wall/item data files: https://github.com/TEdit/Terraria-Map-Editor/tree/main/src/TEdit.Terraria/Data (tiles.json, walls.json, items.json, npcs.json, prefixes.json, paints.json, etc.)\n\nKey API objects:\n- tile: read/write individual tiles (getTileType, setType, setWall, setLiquid, etc.)\n- batch: bulk operations (forEachTile, replaceTile, findTilesByType, etc.)\n- geometry: shape helpers (line, rect, ellipse, fillRect, fillEllipse, setTiles, setWalls)\n- selection: current selection bounds and point-in-selection test\n- chests: chest inventory read/write\n- signs: sign text read/write\n- npcs: NPC management\n- world: read-only world metadata (width, height, title, seed, spawnX, spawnY)\n- metadata: name/ID lookups (tileId, wallId, itemId, tileName, wallName, itemName)\n- log: output (print, warn, error, progress)\n- draw: drawing tools (pencil, brush, fill, routeWire, routeBus for CAD-style wire routing)\n- generate: procedural generation — trees (tree, forest, forestInSelection), worldgen structures (tileRunner, tunnel, lake, oreVein, listOreTypes, findSurface)\n- finder: add results to the Find sidebar panel\n- tools: UI tool access, file operations (save, saveAs, load, getFilePath, setFilePath)\n\nWhen writing scripts:\n- Use metadata.tileId("name") and metadata.wallId("name") to look up IDs by name\n- Always check selection.isActive before using selection-based operations\n- Use log.print() for output and log.progress() for long operations\n- Scripts have full access to the loaded world data\n- Framed tiles can be shifted UV coordinates to become another style of the same item (e.g. platforms, banners, chests). Check tiles.json for frame UV values.\n\nHelp the user write JavaScript scripts for TEdit. Ask what they want to accomplish and generate working scripts.`;
 
 <div className="ai-buttons">
   <a className="ai-btn ai-btn--chatgpt" href="https://chatgpt.com/g/g-6998742288b481919bfd63193f833e92-tedit-api-assistant" target="_blank" rel="noopener noreferrer">
@@ -90,6 +90,30 @@ log.print(`World: ${world.title} (${world.width}x${world.height})`);
 log.print("Hello from TEdit scripting!")
 log.print("World: " .. world.title)
 ```
+
+## TypeScript Autocomplete
+
+TEdit ships a TypeScript declarations file (`tedit-api.d.ts`) that gives you full autocomplete and inline documentation in VS Code or any TypeScript-aware editor — even for plain `.js` scripts.
+
+### Setup
+
+1. **Find the file** — It's already in your TEdit Scripts folder (the same folder opened by the **Open Scripts Folder** button in the Scripting sidebar). You can also download it directly:
+
+   **[Download tedit-api.d.ts](/tedit-api.d.ts)**
+
+2. **Add a reference** — Put this line at the top of your `.js` script:
+
+   ```javascript
+   /// <reference path="tedit-api.d.ts" />
+   ```
+
+   As long as `tedit-api.d.ts` is in the same folder as your script (which it is by default), VS Code will pick it up automatically.
+
+3. **Enjoy autocomplete** — You'll get full IntelliSense for all API objects: `tile`, `batch`, `world`, `tools`, `draw`, `generate`, etc. Hover over any method to see its description and parameter types.
+
+:::tip
+The `/// <reference>` comment is ignored by TEdit's script engine — it's only used by your code editor. Your scripts will run exactly the same with or without it.
+:::
 
 ## Common Recipes
 
