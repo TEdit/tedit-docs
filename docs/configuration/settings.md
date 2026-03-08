@@ -40,6 +40,8 @@ General application behavior and update preferences.
 |---------|-------------|
 | **Error Reporting** | Send anonymous crash and error reports to help improve TEdit. No personal data or world content is included — only stack traces and basic system info. |
 | **Terraria Path** | Path to Terraria content files (for sprite rendering) |
+| **Steam User ID** | Override the auto-detected Steam user ID for locating world files. Useful when you have multiple Steam accounts or TEdit can't find the correct Steam library. |
+| **Max Backups** | How many `.TEdit` backup files to keep per world (default: 10). See [Saves and Backups](saves-and-backups.md#automatic-tedit-backups). |
 
 :::info
 Error reporting is opt-in. You can disable it at any time. Reports are used solely to identify and fix bugs.

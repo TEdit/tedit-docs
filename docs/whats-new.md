@@ -120,3 +120,57 @@ Convert entire regions to a different biome with one stroke. Select a target bio
 Hold **Shift** and click successive points to draw connected straight line segments. Each click anchors the end of one segment and starts the next. Works with the Pencil, Brush, and Morph tools — great for building straight walls, paths, and outlines without freehand wobble.
 
 [Polyline Drawing](interface/toolbar.md#polyline-drawing-shiftclick)
+
+---
+
+## Biome Generation with Morph Tool
+
+The Morph tool now supports **nine biome targets**: Purify, Corruption, Crimson, Hallow, Glowing Mushroom, Jungle, Forest, Snow, and Desert. Paint over existing terrain to convert it to a different biome — tiles, walls, moss, and sprites all transform correctly.
+
+New in this release:
+- **Jungle biome** — full tile and wall coverage, including vines, thorns, and jungle-specific sprites
+- **Expanded Glowing Mushroom** — significantly wider tile and wall coverage for complete mushroom biome conversions
+- **Sprite replacement** — multi-tile sprites (grass, vines, torches, altars, orbs) swap to biome-appropriate variants
+- **Round-trip conversions** — convert between biomes without losing structural detail
+
+[Morph Tool](interface/toolbar.md#morph-tool)
+
+---
+
+## Automatic Backups
+
+TEdit now creates **automatic .TEdit backup files** every time you save. Backups rotate automatically — `.TEdit`, `.TEdit.2`, `.TEdit.3`, and so on — so you always have recent restore points.
+
+- **MaxBackups** setting controls how many backups to keep per world (default: 10)
+- Backup files appear in the **World Browser** alongside your worlds, labeled as "TEdit Backup"
+- Terraria's own `.bak` files also appear, labeled as "Terraria Backup"
+
+[Saves and Backups](configuration/saves-and-backups.md)
+
+---
+
+## Time Slider
+
+The World Properties panel now features a **gradient time slider** that spans the full 24-hour Terraria day cycle. Drag the slider to set any time of day — the gradient background shows the sky color at each point in the cycle. A text field next to the slider displays the time in `h:mm AM/PM` format and accepts typed input.
+
+[World Properties](sidebar-panels/world-properties.md#time--weather)
+
+---
+
+## Steam User ID Setting
+
+A new **Steam User ID** setting under Settings > Paths lets you specify which Steam user's Worlds folder to use. This is helpful if TEdit can't auto-detect the correct Steam library path or if you have multiple Steam accounts.
+
+[Settings](configuration/settings.md#privacy--paths)
+
+---
+
+## Tile & Wall Filter Icons
+
+The tile and wall pickers in the Filter panel now show the correct **item icon** — the item that places each tile or wall — instead of a generic preview. This makes it much easier to identify tiles and walls at a glance.
+
+---
+
+## Large Clipboard Support
+
+Clipboard previews now work correctly for selections that exceed **4096 pixels** in any direction. The paste overlay uses a tiled texture system that splits large buffers into a grid of GPU-safe textures. The sidebar preview remains a single scaled-down thumbnail.

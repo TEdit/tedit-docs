@@ -119,8 +119,10 @@ Converts tiles and walls to a selected biome type.
 Only affects existing tiles — doesn't fill empty space. Behavior changes with depth (sky, dirt, rock, hell layers). Supports Shift+click [polyline drawing](#polyline-drawing-shiftclick).
 
 Options:
-- **Target Biome** — Purify, Corruption, Crimson, Hallow, etc.
+- **Target Biome** — Purify, Corruption, Crimson, Hallow, Glowing Mushroom, Jungle, Forest, Snow, or Desert
 - **Base Tiles** / **Evil Tiles** / **Moss** / **Sprites** — Toggle what gets converted
+
+Multi-tile sprites like grass, vines, torches, altars, and orbs are replaced with biome-appropriate variants when **Sprites** is enabled. Conversions round-trip cleanly — you can convert between biomes without losing structural detail.
 
 ## Paste Tool
 

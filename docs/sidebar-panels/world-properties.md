@@ -20,7 +20,7 @@ The World Properties panel lets you view and edit world metadata, progression fl
 
 ### Time & Weather
 
-- **Time** — Set in-game time of day
+- **Time** — A gradient slider spanning the full 24-hour Terraria day cycle. Drag to set any time — the gradient shows the sky color at each point. The text field next to the slider shows time in `h:mm AM/PM` format and accepts typed input.
 - **Moon Phase** — Cycle through moon phases
 - **Blood Moon** / **Eclipse** — Toggle events
 - **Rain** / **Sandstorm** — Toggle weather
