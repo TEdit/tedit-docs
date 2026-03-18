@@ -1014,6 +1014,10 @@ log.print(`Removed ${count} wire segments`);
 | `getFrameV(x, y) → int` | Get sprite frame V |
 | `getSlope(x, y) → string` | Get slope type |
 | `getWire(x, y, color) → bool` | Check wire (1=red, 2=blue, 3=green, 4=yellow) |
+| `getTileEcho(x, y) → bool` | Check if tile has echo (invisible) coating |
+| `getWallEcho(x, y) → bool` | Check if wall has echo (invisible) coating |
+| `getTileIlluminant(x, y) → bool` | Check if tile has illuminant (full bright) coating |
+| `getWallIlluminant(x, y) → bool` | Check if wall has illuminant (full bright) coating |
 | `setActive(x, y, active)` | Set tile active state |
 | `setType(x, y, type)` | Set tile type (activates tile) |
 | `setWall(x, y, wallType)` | Set wall type |
@@ -1023,6 +1027,10 @@ log.print(`Removed ${count} wire segments`);
 | `setWire(x, y, color, enabled)` | Set wire state |
 | `setSlope(x, y, slope)` | Set slope (None, HalfBrick, SlopeTopRight, etc.) |
 | `setFrameUV(x, y, u, v)` | Set sprite frame coordinates |
+| `setTileEcho(x, y, value)` | Set tile echo (invisible) coating |
+| `setWallEcho(x, y, value)` | Set wall echo (invisible) coating |
+| `setTileIlluminant(x, y, value)` | Set tile illuminant (full bright) coating |
+| `setWallIlluminant(x, y, value)` | Set wall illuminant (full bright) coating |
 | `clear(x, y)` | Reset tile to empty |
 | `copy(fromX, fromY, toX, toY)` | Copy tile properties |
 
