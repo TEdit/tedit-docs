@@ -259,17 +259,19 @@ log.print(JSON.stringify(generate.listOreTypes()));
 | `getAt(x, y) → {x, y, text}` | Sign at position (or null) |
 | `setText(x, y, text)` | Update sign text |
 
-## `npcs` — Town NPCs
+## `npcs` — World NPCs
+
+Manage all world NPCs including town NPCs, bosses, enemies, and any [bestiary](https://terraria.wiki.gg/wiki/Bestiary) entry.
 
 | Property/Method | Description |
 |--------|-------------|
 | `count → int` | Total NPCs |
-| `getAll() → [{name, displayName, x, y, homeX, homeY, isHomeless}]` | All NPCs |
-| `setHome(name, x, y)` | Set NPC home (matches name or displayName, case-insensitive) |
-
-:::note
-The scripting API cannot spawn new NPCs — only modify existing ones.
-:::
+| `getAll() → [{name, displayName, spriteId, x, y, homeX, homeY, isHomeless}]` | All NPCs including duplicates |
+| `setHome(name, x, y)` | Set home for first NPC matching name (case-insensitive) |
+| `setHome(name, x, y, index)` | Set home for Nth NPC matching name (0-based) |
+| `setHomeAll(name, x, y) → int` | Set home for all NPCs matching name; returns count |
+| `create(name, displayName, x, y)` | Create NPC by name, fullName, bestiaryId, or sprite ID |
+| `remove(name) → bool` | Remove first NPC matching name |
 
 ## `tileEntities` — Tile Entity Management
 
