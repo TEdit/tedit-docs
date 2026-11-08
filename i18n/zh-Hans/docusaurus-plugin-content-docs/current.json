@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "TEdit 5",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Interface": {
+    "message": "界面",
+    "description": "The label for category 'Interface' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Sidebar Panels": {
+    "message": "侧边栏面板",
+    "description": "The label for category 'Sidebar Panels' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "配置",
+    "description": "The label for category 'Configuration' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "进阶指南",
+    "description": "The label for category 'Advanced' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Migration": {
+    "message": "版本迁移",
+    "description": "The label for category 'Migration' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Contributing": {
+    "message": "参与贡献",
+    "description": "The label for category 'Contributing' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.doc.TEdit 5 Documentation": {
+    "message": "TEdit 5 文档",
+    "description": "The label for the doc item 'TEdit 5 Documentation' in sidebar 'tutorialSidebar', linking to the doc intro"
+  },
+  "sidebar.tutorialSidebar.doc.Install Requirements": {
+    "message": "安装与运行要求",
+    "description": "The label for the doc item 'Install Requirements' in sidebar 'tutorialSidebar', linking to the doc install-requirements"
+  },
+  "sidebar.tutorialSidebar.doc.Getting Started": {
+    "message": "快速入门",
+    "description": "The label for the doc item 'Getting Started' in sidebar 'tutorialSidebar', linking to the doc getting-started"
+  },
+  "sidebar.tutorialSidebar.doc.What's New": {
+    "message": "更新日志 / 新特性",
+    "description": "The label for the doc item 'What's New' in sidebar 'tutorialSidebar', linking to the doc whats-new"
+  }
+}

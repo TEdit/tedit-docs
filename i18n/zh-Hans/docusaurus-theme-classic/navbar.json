@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "TEdit",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "TEdit 图标",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "文档",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Web Editor": {
+    "message": "网页版编辑器",
+    "description": "Navbar item with label Web Editor"
+  },
+  "item.label.Sponsor": {
+    "message": "赞助支持",
+    "description": "Navbar item with label Sponsor"
+  }
+}
