@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "TEdit 4",
+    "description": "The label for version 4"
+  },
+  "sidebar.tutorialSidebar.category.Basics": {
+    "message": "Basics",
+    "description": "The label for category 'Basics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Sidebar Tools": {
+    "message": "Sidebar Tools",
+    "description": "The label for category 'Sidebar Tools' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Plugins": {
+    "message": "Plugins",
+    "description": "The label for category 'Plugins' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category 'Configuration' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.doc.TEdit Documentation": {
+    "message": "TEdit Documentation",
+    "description": "The label for the doc item 'TEdit Documentation' in sidebar 'tutorialSidebar', linking to the doc intro"
+  },
+  "sidebar.tutorialSidebar.doc.Install Requirements": {
+    "message": "Install Requirements",
+    "description": "The label for the doc item 'Install Requirements' in sidebar 'tutorialSidebar', linking to the doc install-requirements"
+  }
+}

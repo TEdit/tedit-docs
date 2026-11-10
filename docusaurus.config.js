@@ -22,7 +22,76 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: [
+      'en',
+      'zh-Hans',
+      'zh-Hant',
+      'ar',
+      'de',
+      'es',
+      'fr',
+      'it',
+      'ja',
+      'ko',
+      'pl',
+      'pt-BR',
+      'ru',
+    ],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-US',
+      },
+      'zh-Hans': {
+        label: '简体中文',
+        htmlLang: 'zh-Hans',
+      },
+      'zh-Hant': {
+        label: '繁體中文',
+        htmlLang: 'zh-Hant',
+      },
+      ar: {
+        label: 'العربية',
+        direction: 'rtl',
+        htmlLang: 'ar',
+      },
+      de: {
+        label: 'Deutsch',
+        htmlLang: 'de',
+      },
+      es: {
+        label: 'Español',
+        htmlLang: 'es',
+      },
+      fr: {
+        label: 'Français',
+        htmlLang: 'fr',
+      },
+      it: {
+        label: 'Italiano',
+        htmlLang: 'it',
+      },
+      ja: {
+        label: '日本語',
+        htmlLang: 'ja',
+      },
+      ko: {
+        label: '한국어',
+        htmlLang: 'ko',
+      },
+      pl: {
+        label: 'Polski',
+        htmlLang: 'pl',
+      },
+      'pt-BR': {
+        label: 'Português (Brasil)',
+        htmlLang: 'pt-BR',
+      },
+      ru: {
+        label: 'Русский',
+        htmlLang: 'ru',
+      },
+    },
   },
 
   themes: [
@@ -31,6 +100,7 @@ const config = {
       {
         hashed: true,
         docsRouteBasePath: '/',
+        language: ['en', 'zh'],
       },
     ],
   ],
@@ -89,6 +159,10 @@ const config = {
           {
             type: 'docsVersionDropdown',
             position: 'left',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://www.tedit.dev',
